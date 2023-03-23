@@ -17,7 +17,7 @@ function Home() {
               </strong>
             </h1>
 
-            <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed text-white">
+            <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed text-white bg-thc">
               Cozinha e moveis feito à medida por encomenda para corresponder às
               suas necessidades
             </p>
