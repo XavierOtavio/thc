@@ -1,18 +1,57 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { DateRange } from "react-date-range";
+import { Combobox } from "@headlessui/react";
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faCalendarDays,
+  faUserGroup,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
+  const [quantityOptions, setQuantityOptions] = useState({
+    pessoas: 2,
+    quartos: 1,
+  });
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
+  const [query, setQuery] = useState("");
+  const [openDate, setOpenDate] = useState(false);
+  const [openQuantityOptions, setOpenQuantityOptions] = useState(false);
+  const handleQuantityOption = (item, operacao) => {
+    setQuantityOptions((prev) => {
+      return {
+        ...prev,
+        [item]:
+          operacao === "mais"
+            ? quantityOptions[item] + 1
+            : quantityOptions[item] - 1,
+      };
+    });
+  };
+  let filteredLocation = [];
+
   return (
     <div>
       <section class="relative bg-[url(https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)] bg-cover bg-center bg-no-repeat">
         <div class="absolute inset-0 bg-black/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-thc3 sm:to-white/25"></div>
 
         <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-          <div class="max-w-xl text-center sm:text-left">
+          <div class="max-w-6xl text-center sm:text-left">
             <h1 class="text-3xl font-serif sm:text-5xl text-white">
               Bem vindo ao
               <strong class="block font-serif text-thc1">
-                {" "}
                 Luxuoso Hotel THC
               </strong>
             </h1>
@@ -21,22 +60,106 @@ function Home() {
               Cozinha e moveis feito à medida por encomenda para corresponder às
               suas necessidades
             </p>
-
-            <div class="mt-8 flex flex-wrap gap-4 text-center">
-              <a
-                href="#cozinhas"
-                class="block w-full scroll-smooth rounded bg-thc1 px-12 py-3 text-sm font-medium text-white shadow transition hover:bg-thc1 focus:outline-none focus:ring active:bg-thc2 sm:w-auto"
+            <form className="flex">
+              <button
+                type="button"
+                className={`mx-0.5 flex h-10 flex-row rounded bg-white px-16 py-2 align-middle text-gray-500 hover:cursor-pointer ${
+                  openDate
+                    ? "ring-1 ring-thc1"
+                    : "outline outline-1 outline-black"
+                }`}
+                onClick={() => setOpenDate(!openDate)}
               >
-                Vamos começar
-              </a>
-
-              <a
-                href="#catalogo"
-                class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-thc1 shadow hover:text-thc1 focus:outline-none focus:ring active:text-thc2 sm:w-auto"
+                <FontAwesomeIcon
+                  icon={faCalendarDays}
+                  className="h-5 w-5 text-gray-500 mr-4"
+                />
+                {`${format(date[0].startDate, "dd/MM/yyyy")} até ${format(
+                  date[0].endDate,
+                  "dd/MM/yyyy"
+                )}`}
+              </button>
+              {openDate && (
+                <DateRange
+                  editableDateInputs={true}
+                  onChange={(item) => setDate([item.selection])}
+                  moveRangeOnFirstSelection={false}
+                  ranges={date}
+                  className="absolute top-2/4 z-40 mr-5 mt-28 rounded-md border border-gray-600 p-2 outline-red-500"
+                />
+              )}
+              <button
+                className={`flex relative h-10 rounded bg-white py-2 px-9 align-middle text-gray-500 hover:cursor-pointer ${
+                  openQuantityOptions
+                    ? "ring-1 ring-thc1"
+                    : "outline outline-1 outline-black"
+                }`}
+                type="button"
+                onClick={() => setOpenQuantityOptions(!openQuantityOptions)}
               >
-                Saber Mais
-              </a>
-            </div>
+                <FontAwesomeIcon icon={faUserGroup} className="mr-2 h-6 w-6" />
+                {quantityOptions.pessoas} Pessoas {quantityOptions.quartos}{" "}
+                Quartos
+              </button>
+              {openQuantityOptions && (
+                <div className="absolute top-2/4 left-2/4 -ml-60 mt-28 w-60 rounded bg-white p-2">
+                  <div className="m-2 flex  justify-between">
+                    <p>Pessoas</p>
+                    <div className="flex items-center gap-5">
+                      <button
+                        className="h-6 w-6 border border-black hover:border-thc1"
+                        type="button"
+                        onClick={() => handleQuantityOption("pessoas", "menos")}
+                      >
+                        -
+                      </button>
+                      <span>{quantityOptions.pessoas}</span>
+                      <button
+                        className="h-6 w-6 border border-black hover:border-thc1"
+                        type="button"
+                        onClick={() => handleQuantityOption("pessoas", "mais")}
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <div className="m-2 flex justify-between">
+                    <p>Quartos</p>
+                    <div className="flex items-center gap-5">
+                      <button
+                        className="h-6 w-6 border border-black hover:border-thc1"
+                        type="button"
+                        onClick={() => handleQuantityOption("quartos", "menos")}
+                      >
+                        -
+                      </button>
+                      <span>{quantityOptions.quartos}</span>
+                      <button
+                        className="h-6 w-6 border border-black hover:border-thc1"
+                        type="button"
+                        onClick={() => handleQuantityOption("quartos", "mais")}
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div>
+                <NavLink to="/search">
+                  {/* <MagnifyingGlassIcon className="ml-2 h-11 w-11 rounded-full bg-orange-500 stroke-white p-2 hover:cursor-pointer hover:bg-orange-600" /> */}
+                  <button className="ml-2 h-10 rounded bg-thc1 py-2 px-3 align-middle flex text-white  hover:cursor-pointer hover:bg-thc2">
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      color="white"
+                      className="mr-3 mt-1 h-4"
+                    />
+                    Pesquisar
+                  </button>
+                </NavLink>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -45,13 +168,58 @@ function Home() {
         <div class="bg-white">
           <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-3xl text-center">
-              <h2 class="text-base font-semibold uppercase tracking-wide text-rose-600">
-                Marca de confiança em maisde 26,000 casas
+              <h1 class="mt-2 text-3xl font-serif text-gray-900 sm:text-4xl">
+                - Hotel Tio Honório Colaço -
+              </h1>
+              <h2 class="text-base font-light uppercase tracking-wide text-gray-500 mt-4">
+                Bem-vindo ao hotel ideal para fugir da rotina diária.
+                <p>
+                  {" "}
+                  O Hotel Tio Honório Colaço encontra-se envolvido por uma
+                  paisagem verdejante, dominado pelas vinhas e uma frondosa
+                  mata, onde o silêncio impera. É um boutique hotel de 5
+                  estrelas, em que a envolvência convida-o a deixar-se levar
+                  pelo ritmo, sons, cores e serenidade da natureza. Situado na
+                  freguesia de Canas, integra um dos mais emblemáticos edifícios
+                  históricos de Nelas. Oferece uma ligação única entre história,
+                  natureza, design e sofisticação que se fundem de forma
+                  excecional.
+                </p>
               </h2>
-              <p class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                A melhor maneira de investir na sua cozinha
-              </p>
             </div>
+          </div>
+        </div>
+        <div class="grid gap-1 grid-cols-2 ml-16 mr-16 mb-16">
+          <img
+            alt="Les Paul"
+            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            class="aspect-video w-full object-cover"
+          />
+
+          <div class="grid grid-cols-2 gap-1">
+            <img
+              alt="Les Paul"
+              src="https://images.unsplash.com/photo-1534679541758-8dc76ff8081d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1508&q=80"
+              class="aspect-video w-full  object-cover"
+            />
+
+            <img
+              alt="Les Paul"
+              src="https://images.unsplash.com/photo-1529290130-4ca3753253ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"
+              class="aspect-video w-full object-cover"
+            />
+
+            <img
+              alt="Les Paul"
+              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              class="aspect-video w-full object-cover"
+            />
+
+            <img
+              alt="Les Paul"
+              src="https://offloadmedia.feverup.com/lisboasecreta.co/wp-content/uploads/2019/01/16105523/039_Atmosfia-e1547811185510.jpg"
+              class="aspect-video w-full object-cover"
+            />
           </div>
         </div>
       </div>
