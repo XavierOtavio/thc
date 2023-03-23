@@ -17,6 +17,11 @@ import {
   faPersonSwimming,
   faDumbbell,
   faBellConcierge,
+  faUser,
+  faTv,
+  faBath,
+  faFan,
+  faBed,
 } from "@fortawesome/free-solid-svg-icons";
 
 function RoomSearch() {
@@ -77,6 +82,8 @@ function RoomSearch() {
                   "dd/MM/yyyy"
                 )}`}
               </button>
+
+              
               {openDate && (
                 <DateRange
                   editableDateInputs={true}
@@ -158,29 +165,224 @@ function RoomSearch() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-56">
-        <Link
-          to="/room"
-          class="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <img
-            class="h-16 w-16 rounded-full object-cover"
-            src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
-            alt=""
-          />
-          <div class="flex flex-col justify-between p-4 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
+      <section className="bg-white ">
+        <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative z-10 lg:py-5">
+              <div class="relative h-64 sm:h-80 lg:h-full">
+                <img
+                  alt="House"
+                  src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
+                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+
+            <div class="relative flex items-center bg-thc4 rounded-r-lg">
+              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+
+              <div class="px-32 sm:p-16 lg:py-16 text-left">
+                <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">
+                  Quarto Presidencial
+                </h2>
+
+                <p class="mt-4 text-gray-600">
+                  {" "}
+                  Capacidade: <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />
+                </p>
+
+                <p class="mt-4 text-gray-600">
+                  Serviços incluídos: <FontAwesomeIcon icon={faWifi} />
+                  {""} <FontAwesomeIcon icon={faTv} />{" "}
+                  <FontAwesomeIcon icon={faBath} />{" "}
+                  <FontAwesomeIcon icon={faFan} />
+                </p>
+
+                <p class="mt-4 text-gray-600 mb-3">
+                  Quarto com zona de estar espaçosa com secretária e sofá e
+                  varanda. O quarto tem cama de...
+                </p>
+
+                <div className="w-full justify-end flex">
+                  <span class="text-2xl font-bold text-thc1 ">1.000,00€</span>
+                  <span class="text-sm font-medium text-gray-500">/noite</span>
+                </div>
+
+                <Link
+                  to="/room"
+                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                >
+                  Adicionar ao carrinho
+                </Link>
+              </div>
+            </div>
           </div>
-        </Link>
+        </div>
+        <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative z-10 lg:py-5">
+              <div class="relative h-64 sm:h-80 lg:h-full">
+                <img
+                  alt="House"
+                  src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
+                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+
+            <div class="relative flex items-center bg-thc4 rounded-r-lg">
+              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+
+              <div class="px-32 sm:p-16 lg:py-16 text-left">
+                <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">
+                  Quarto de Casal
+                </h2>
+
+                <p class="mt-4 text-gray-600">
+                  {" "}
+                  Capacidade: <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />
+                </p>
+
+                <p class="mt-4 text-gray-600">
+                  Serviços incluídos: <FontAwesomeIcon icon={faWifi} />
+                  {""} <FontAwesomeIcon icon={faTv} />{" "}
+                  <FontAwesomeIcon icon={faBath} />{" "}
+                  <FontAwesomeIcon icon={faFan} />
+                </p>
+
+                <p class="mt-4 text-gray-600 mb-5">
+                  Com um quarto com cama de casal, a suite dispõe de wi-fi, uma
+                  sala de estar com...
+                </p>
+
+                <div className="w-full justify-end flex">
+                  <span class="text-2xl font-bold text-thc1 ">250,00€</span>
+                  <span class="text-sm font-medium text-gray-500">/noite</span>
+                </div>
+
+                <Link
+                  to="/room"
+                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                >
+                  Adicionar ao carrinho
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative z-10 lg:py-5">
+              <div class="relative h-64 sm:h-80 lg:h-full">
+                <img
+                  alt="House"
+                  src="https://hotelemile.com/_novaimg/galleria/1493923.jpg"
+                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+
+            <div class="relative flex items-center bg-thc4 rounded-r-lg">
+              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+
+              <div class="px-32 sm:p-16 lg:py-16 text-left">
+                <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">
+                  Quarto Individual
+                </h2>
+
+                <p class="mt-4 text-gray-600">
+                  {" "}
+                  Capacidade: <FontAwesomeIcon icon={faUser} />
+                </p>
+
+                <p class="mt-4 text-gray-600">
+                  Serviços incluídos: <FontAwesomeIcon icon={faWifi} />
+                  {""} <FontAwesomeIcon icon={faTv} />{" "}
+                  <FontAwesomeIcon icon={faBath} />{" "}
+                  <FontAwesomeIcon icon={faFan} />
+                </p>
+
+                <p class="mt-4 text-gray-600 mb-5">
+                  Localizados do 3º ao 6º piso do hotel, este quarto têm uma
+                  varanda com vista plena sobre...
+                </p>
+
+                <div className="w-full justify-end flex">
+                  <span class="text-2xl font-bold text-thc1 ">150,00€</span>
+                  <span class="text-sm font-medium text-gray-500">/noite</span>
+                </div>
+
+                <Link
+                  to="/room"
+                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                >
+                  Adicionar ao carrinho
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative z-10 lg:py-5">
+              <div class="relative h-64 sm:h-80 lg:h-full">
+                <img
+                  alt="House"
+                  src="https://cdn-hweb.hsystem.com.br/603e8a92acb6940aa8b6bc13/4459f7a96dca47318f3cf31c16b86e98.jpg"
+                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+
+            <div class="relative flex items-center bg-thc4 rounded-r-lg">
+              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+
+              <div class="px-32 sm:p-16 lg:py-16 text-left">
+                <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">Suite</h2>
+
+                <p class="mt-4 text-gray-600">
+                  {" "}
+                  Capacidade: <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />{" "}
+                  <FontAwesomeIcon icon={faUser} />
+                </p>
+
+                <p class="mt-4 text-gray-600">
+                  Serviços incluídos: <FontAwesomeIcon icon={faWifi} />
+                  {""} <FontAwesomeIcon icon={faTv} />{" "}
+                  <FontAwesomeIcon icon={faBath} />{" "}
+                  <FontAwesomeIcon icon={faFan} />
+                </p>
+
+                <p class="mt-4 text-gray-600 mb-3">
+                  Suite com zona de estar espaçosa com secretária e sofá e
+                  varanda. O quarto tem cama de...
+                </p>
+
+                <div className="w-full justify-end flex">
+                  <span class="text-2xl font-bold text-thc1 ">700,00€</span>
+                  <span class="text-sm font-medium text-gray-500">/noite</span>
+                </div>
+
+                <Link
+                  to="/room"
+                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                >
+                  Adicionar ao carrinho
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
 }
 
 export default RoomSearch;
+

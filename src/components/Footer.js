@@ -6,7 +6,7 @@ function Footer() {
       <section class="bg-thc3">
         <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-10 lg:px-8">
           <h2 class="text-center text-4xl font-bold tracking-tight text-thc1 sm:text-5xl">
-            Read trusted reviews from our customers
+            A opinião dos nossos clientes
           </h2>
           <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
             <blockquote class="rounded-lg bg-gray-400 p-8 text-justify">
