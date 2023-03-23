@@ -7,6 +7,9 @@ import LayoutBack from "./components/LayoutBack";
 import PageNotFound from "./components/PageNotFound";
 import Rooms from "./components/Rooms";
 import Booking from "./components/Booking";
+import RoomDetails from "./components/RoomDetails";
+import RoomSearch from "./components/RoomSearch";
+import CheckIn from "./components/CheckIn";
 
 function App() {
   return (
@@ -15,14 +18,15 @@ function App() {
         <Routes>
           <Route path="/" element={<LayoutFront />}>
             <Route index element={<Home />} />
-            <Route path="/productsList" element={<h1>404</h1>} />
+            <Route path="/roomsearch" element={<RoomSearch />} />
           </Route>
           <Route path="/dashboard" element={<LayoutBack />}>
             <Route index element={<h1>Dashboard</h1>} />
             <Route path="booking" element={<Booking />} />
-            <Route path="checkin" element={<h1>CheckIn</h1>} />
+            <Route path="checkin" element={<CheckIn />} />
             <Route path="checkout" element={<h1>CheckOut</h1>} />
             <Route path="rooms" element={<Rooms />} />
+            <Route path="rooms/:id" element={<RoomDetails />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

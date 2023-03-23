@@ -36,9 +36,11 @@ export default function HeaderBack() {
       <div className="w-full h-full items-center inline-flex justify-around gap-6">
         <Link to="/dashboard">
           <p
-            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer${
-              location.pathname === "/dashboard" && "text-thc2 font-bold"
-            } text-gray-500`}
+            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
+              location.pathname === "/dashboard"
+                ? "text-thc2 font-bold"
+                : "text-gray-500"
+            }`}
           >
             Dashboard
           </p>
@@ -46,9 +48,10 @@ export default function HeaderBack() {
         <Link to="/dashboard/booking">
           <p
             className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
-              location.pathname === "/dashboard/booking" &&
-              "text-thc2 font-bold"
-            } text-gray-500`}
+              location.pathname === "/dashboard/booking"
+                ? "text-thc2 font-bold"
+                : "text-gray-500"
+            }`}
           >
             Reservas
           </p>
@@ -56,8 +59,10 @@ export default function HeaderBack() {
         <Link to="/dashboard/rooms">
           <p
             className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
-              location.pathname === "/dashboard/rooms" && "text-thc2 font-bold"
-            } text-gray-500`}
+              location.pathname === "/dashboard/rooms"
+                ? "text-thc2 font-bold"
+                : "text-gray-500"
+            }`}
           >
             Quartos
           </p>
@@ -76,9 +81,10 @@ export default function HeaderBack() {
         <Link to="/dashboard/checkin">
           <p
             className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
-              location.pathname === "/dashboard/checkin" &&
-              "text-thc2 font-bold"
-            } text-gray-500`}
+              location.pathname === "/dashboard/checkin"
+                ? "text-thc2 font-bold"
+                : "text-gray-500"
+            }`}
           >
             CheckIn
           </p>
@@ -86,9 +92,10 @@ export default function HeaderBack() {
         <Link to="/dashboard/checkout">
           <p
             className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
-              location.pathname === "/dashboard/checkout" &&
-              "text-thc2 font-bold"
-            } text-gray-500`}
+              location.pathname === "/dashboard/checkout"
+                ? "text-thc2 font-bold"
+                : "text-gray-500"
+            }`}
           >
             CheckOut
           </p>

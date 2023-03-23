@@ -27,17 +27,7 @@ function Header() {
             Home
           </button>
         </Link>
-        <Link to="/productsList">
-          <button
-            className={`${
-              location.pathname === "/productsList"
-                ? "bg-thc1 text-white"
-                : "text-thc2"
-            } block rounded px-10 py-3  ml-2 font-medium hover:border-thc1 hover:bg-thc1 hover:text-white`}
-          >
-            Catálogo
-          </button>
-        </Link>
+
         <Link to="/dashboard">
           <button class="block rounded px-10 py-3 text-thc2 ml-2 font-medium hover:border-thc1 hover:bg-thc1 hover:text-white">
             Dashboard

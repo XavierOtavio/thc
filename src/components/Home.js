@@ -8,10 +8,15 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLocationDot,
   faCalendarDays,
   faUserGroup,
   faMagnifyingGlass,
+  faWifi,
+  faSquareParking,
+  faUtensils,
+  faPersonSwimming,
+  faDumbbell,
+  faBellConcierge,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
@@ -64,9 +69,7 @@ function Home() {
               <button
                 type="button"
                 className={`mx-0.5 flex h-10 flex-row rounded bg-white px-16 py-2 align-middle text-gray-500 hover:cursor-pointer ${
-                  openDate
-                    ? "ring-1 ring-thc1"
-                    : "outline outline-1 outline-black"
+                  openDate ? "ring-1 ring-thc1" : "border shadow-sm"
                 }`}
                 onClick={() => setOpenDate(!openDate)}
               >
@@ -90,9 +93,7 @@ function Home() {
               )}
               <button
                 className={`flex relative h-10 rounded bg-white py-2 px-9 align-middle text-gray-500 hover:cursor-pointer ${
-                  openQuantityOptions
-                    ? "ring-1 ring-thc1"
-                    : "outline outline-1 outline-black"
+                  openQuantityOptions ? "ring-1 ring-thc1" : "border shadow-sm"
                 }`}
                 type="button"
                 onClick={() => setOpenQuantityOptions(!openQuantityOptions)}
@@ -147,8 +148,7 @@ function Home() {
               )}
 
               <div>
-                <NavLink to="/search">
-                  {/* <MagnifyingGlassIcon className="ml-2 h-11 w-11 rounded-full bg-orange-500 stroke-white p-2 hover:cursor-pointer hover:bg-orange-600" /> */}
+                <NavLink to="/roomsearch">
                   <button className="ml-2 h-10 rounded bg-thc1 py-2 px-3 align-middle flex text-white  hover:cursor-pointer hover:bg-thc2">
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
@@ -230,19 +230,19 @@ function Home() {
               <div class="mx-auto max-w-md text-center lg:text-left">
                 <header>
                   <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-                    Cozinhas
+                    Quartos
                   </h2>
 
                   <p class="mt-4 text-gray-500">
-                    Encontre uma grande variadade de designs e materiais para ir
-                    de encontro às suas espectativas
+                    Encontre uma grande gama de quartos para todos os gostos, de
+                    forma a desfrutar de uma estadia única.
                   </p>
                 </header>
                 <Link
-                  to="productsList"
+                  to="/roomsearch"
                   class="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
                 >
-                  <h1>Veja aqi!</h1>
+                  <h1>Descobre mais!</h1>
                 </Link>
               </div>
             </div>
@@ -252,14 +252,14 @@ function Home() {
                 <li>
                   <Link to="#" class="group block">
                     <img
-                      src="https://www.gower-furniture.co.uk/wp-content/uploads/2021/05/Capri-Dark-Grey.jpg"
+                      src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
                       alt=""
                       class="aspect-square w-full rounded object-cover"
                     />
 
                     <div class="mt-3">
                       <h3 class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
-                        Cozinha Deluxe
+                        Quarto Presidencial
                       </h3>
                     </div>
                   </Link>
@@ -268,14 +268,14 @@ function Home() {
                 <li>
                   <Link to="#" class="group block">
                     <img
-                      src="https://www.eshoper.in/wp-content/uploads/2021/12/best-kitchen-furniture-latest-design-low-price-furnitures-store-panvel-kamothe-navi-mumbai.jpg"
+                      src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
                       alt=""
                       class="aspect-square w-full rounded object-cover"
                     />
 
                     <div class="mt-3">
                       <h3 class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
-                        Cozinha Cerâmica
+                        Quarto de Casal
                       </h3>
                     </div>
                   </Link>
@@ -285,50 +285,128 @@ function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-          <div class="mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Negocios de confiança
+      <section class=" flex justify-center">
+        <div class="max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+          <div class="max-w-xl text-left">
+            <h2 class="text-3xl font-bold sm:text-4xl">
+              Descubra os nossos serviços
             </h2>
 
-            <p class="mt-4 text-gray-500 sm:text-xl">
-              Qualidade comprovada e testada pelos nossos técnicos
+            <p class="mt-4 text-gray-500 font-thin">
+              O nosso hotel oferece uma grande variedade de serviços para que se
+              sinta em casa. Desde o pequeno-almoço até ao serviço de quartos,
+              passando pelo bar e restaurante, temos tudo o que precisa para uma
+              estadia perfeita. Testado e aprovado pelo Selo de Qualidade
+              Turística do senhor doutor Marcelo Rebelo de Sousa.
             </p>
           </div>
 
-          <div class="mt-8 sm:mt-12">
-            <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              <div class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-                <dt class="order-last text-lg font-medium text-gray-500">
-                  Total Vendas
-                </dt>
+          <div class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-left">
+            <div class="flex items-start gap-4">
+              <FontAwesomeIcon icon={faWifi} className="text-thc1 h-8 w-8" />
 
-                <dd class="text-4xl font-extrabold text-red-600 md:text-5xl">
-                  4.8M€
-                </dd>
+              <div>
+                <h2 class="text-lg font-bold">Wi-Fi</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                  Gratuito em todo o hotel. Dispomos de uma rede de Wi-Fi de
+                  alta velocidade (10Gbps) em todo o hotel, para que possa
+                  navegar sem preocupações. Avaliado pela OF com 5 estrelas.
+                </p>
               </div>
+            </div>
 
-              <div class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-                <dt class="order-last text-lg font-medium text-gray-500">
-                  Casas
-                </dt>
+            <div class="flex items-start gap-4">
+              <FontAwesomeIcon
+                icon={faSquareParking}
+                className="text-thc1 h-8 w-8"
+              />
 
-                <dd class="text-4xl font-extrabold text-red-600 md:text-5xl">
-                  26000
-                </dd>
+              <div>
+                <h2 class="text-lg font-bold">Estacionamento</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                  O estacionamento é gratuito para todos os hóspedes do hotel.
+                  Dispõe de 500 lugares de estacionamento subterrâneo, com
+                  vigilancia 24 horas por dia, 7 dias por semana e 365 dias por
+                  ano e acesso directo ao hotel. Acessível apenas a carros,
+                  motas, bicicletas, autocarros, autocaravanas e camiões.
+                </p>
               </div>
+            </div>
 
-              <div class="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-                <dt class="order-last text-lg font-medium text-gray-500">
-                  moveis
-                </dt>
+            <div class="flex items-start gap-4">
+              <FontAwesomeIcon
+                icon={faUtensils}
+                className="text-thc1 h-8 w-8"
+              />
 
-                <dd class="text-4xl font-extrabold text-red-600 md:text-5xl">
-                  122000
-                </dd>
+              <div>
+                <h2 class="text-lg font-bold">Restauração</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                  Dispomos de 3 restaurantes, especialistas em gastronomia de
+                  todo o mundo, com uma grande variedade de pratos e bebidas.
+                  Inlcui ainda um bar de cocktails e um bar de snacks.
+                </p>
               </div>
-            </dl>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <FontAwesomeIcon
+                icon={faPersonSwimming}
+                className="text-thc1 h-8 w-8"
+              />
+
+              <div>
+                <h2 class="text-lg font-bold">Piscinas</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                  Piscinas exteriores e interiores. Horário de funcionamento:
+                  9h00 - 22h00. A piscina exterior está aberta de Abril a
+                  Outubro. Piscinas certificas pela OF com 5 estrelas pois
+                  cumprem com todos os requisitos de segurança e não apresentam
+                  riscos para a saúde dos utilizadores tais como a presença de
+                  bactérias, fungos, algas, e urina.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <FontAwesomeIcon
+                icon={faDumbbell}
+                className="text-thc1 h-8 w-8"
+              />
+
+              <div>
+                <h2 class="text-lg font-bold">Ginásio</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                  O ginásio está aberto 24 horas por dia, 7 dias por semana e
+                  365 dias por ano. Equipado com aparelhos de última geração e
+                  com personal trainers disponíveis para ajudar os hóspedes a
+                  atingir os seus objectivos ou simplemente para se conhecerem
+                  melhor.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <FontAwesomeIcon
+                icon={faBellConcierge}
+                className="text-thc1 h-8 w-8"
+              />
+
+              <div>
+                <h2 class="text-lg font-bold">Serviço de quartos</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                  Serviço de quartos extremamente rápido, eficiente e caro.
+                  Ideal para quem quer impressionar a sua cara-metade com uma
+                  garrafa de champanhe e morangos frescos no quarto.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
