@@ -5,12 +5,12 @@ function Footer() {
     <div>
       <section class="bg-thc3">
         <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-10 lg:px-8">
-          <h2 class="text-center text-4xl font-bold tracking-tight sm:text-5xl text-thc1">
+          <h2 class="text-center text-4xl font-bold tracking-tight text-thc1 sm:text-5xl">
             Read trusted reviews from our customers
           </h2>
           <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
             <blockquote class="rounded-lg bg-gray-400 p-8 text-justify">
-              <div class="flex items-center text-left gap-4">
+              <div class="flex items-center gap-4 text-left">
                 <img
                   alt="Man"
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -18,7 +18,7 @@ function Footer() {
                 />
 
                 <div>
-                  <div class="flex justify-left gap-0.5 text-white">
+                  <div class="justify-left flex gap-0.5 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-4 w-4"
@@ -84,7 +84,7 @@ function Footer() {
                 />
 
                 <div>
-                  <div class="flex justify-left gap-0.5 text-white">
+                  <div class="justify-left flex gap-0.5 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-4 w-4"
@@ -146,7 +146,7 @@ function Footer() {
                 />
 
                 <div>
-                  <div class="flex justify-left gap-0.5 text-white">
+                  <div class="justify-left flex gap-0.5 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-4 w-4"
@@ -204,15 +204,15 @@ function Footer() {
           </div>
         </div>
         <footer aria-label="Site Footer" class="bg-thc3">
-          <div class="w-full mx-auto container  p-4 md:flex md:items-center md:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <div class="container mx-auto w-full  p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
               © 2023{" "}
               <a href="https://flowbite.com/" class="hover:underline">
                 Hotel THC™
               </a>
               . Todos os direitos reservados.
             </span>
-            <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+            <ul class="mt-3 flex flex-wrap items-center text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
               <li>
                 <a href="#" class="mr-4 hover:underline md:mr-6 ">
                   Sobre

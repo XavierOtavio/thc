@@ -10,6 +10,7 @@ import Booking from "./components/Booking";
 import RoomDetails from "./components/RoomDetails";
 import RoomSearch from "./components/RoomSearch";
 import CheckIn from "./components/CheckIn";
+import CheckOut from "./components/CheckOut";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <Route index element={<h1>Dashboard</h1>} />
             <Route path="booking" element={<Booking />} />
             <Route path="checkin" element={<CheckIn />} />
-            <Route path="checkout" element={<h1>CheckOut</h1>} />
+            <Route path="checkout" element={<CheckOut />} />
             <Route path="rooms" element={<Rooms />} />
             <Route path="rooms/:id" element={<RoomDetails />} />
           </Route>

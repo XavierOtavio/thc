@@ -55,25 +55,25 @@ export default function RoomList() {
     switch (availability) {
       case "available":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-green-100 bg-green-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-green-600 px-2 py-1 text-xs font-bold leading-none text-green-100">
             Disponível
           </span>
         );
       case "maintenance":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs font-bold leading-none text-red-100">
             Manutenção
           </span>
         );
       case "reserved":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-indigo-100 bg-indigo-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-indigo-600 px-2 py-1 text-xs font-bold leading-none text-indigo-100">
             Reservado
           </span>
         );
       default:
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-gray-100 bg-gray-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-gray-600 px-2 py-1 text-xs font-bold leading-none text-gray-100">
             Não definido
           </span>
         );
@@ -84,31 +84,31 @@ export default function RoomList() {
     switch (type) {
       case "single":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-blue-100 bg-blue-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-blue-600 px-2 py-1 text-xs font-bold leading-none text-blue-100">
             Individual
           </span>
         );
       case "double":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-pink-100 bg-pink-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-pink-600 px-2 py-1 text-xs font-bold leading-none text-pink-100">
             Casal
           </span>
         );
       case "suite":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-indigo-100 bg-indigo-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-indigo-600 px-2 py-1 text-xs font-bold leading-none text-indigo-100">
             Suite
           </span>
         );
       case "presidential":
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-yellow-100 bg-yellow-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-yellow-600 px-2 py-1 text-xs font-bold leading-none text-yellow-100">
             Presidencial
           </span>
         );
       default:
         return (
-          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-gray-100 bg-gray-600 rounded-full">
+          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-gray-600 px-2 py-1 text-xs font-bold leading-none text-gray-100">
             Não definido
           </span>
         );
@@ -116,39 +116,39 @@ export default function RoomList() {
   };
 
   return (
-    <div className="h-full w-full grid grid-cols-12 grid-rows-6 items-start gap-10 py-10">
+    <div className="grid h-full w-full grid-cols-12 grid-rows-6 items-start gap-10 py-10">
       <div className="col-start-2 col-end-12 row-start-1 row-end-2 h-full">
-        <div className="h-full w-full bg-thc3 px-10 inline-flex items-center justify-between rounded-xl">
-          <div className="h-full w-full flex items-center">
+        <div className="inline-flex h-full w-full items-center justify-between rounded-xl bg-thc3 px-10">
+          <div className="flex h-full w-full items-center">
             <FontAwesomeIcon
               icon={faSearch}
-              className="text-thc2 ml-2 h-6 w-6 absolute"
+              className="absolute ml-2 h-6 w-6 text-thc2"
             />
             <input
-              className="text-gray-400 pl-10 focus:outline-none focus:ring focus:ring-thc2 bg-white font-normal w-64 h-10 flex items-center text-sm border-gray-300 rounded border shadow"
+              className="flex h-10 w-64 items-center rounded border border-gray-300 bg-white pl-10 text-sm font-normal text-gray-400 shadow focus:outline-none focus:ring focus:ring-thc2"
               placeholder="Por id ou nome do cliente"
             />
           </div>
-          <div className="h-full w-full flex items-center justify-center text-white">
+          <div className="flex h-full w-full items-center justify-center text-white">
             <FontAwesomeIcon
               icon={faCaretLeft}
-              className="text-thc2 ml-2 h-6 w-6 cursor-pointer"
+              className="ml-2 h-6 w-6 cursor-pointer text-thc2"
             />
             A mostrar 1-10 de 10 resultados
             <FontAwesomeIcon
               icon={faCaretLeft}
               transform="rotate-180"
-              className="text-thc2 ml-2 h-6 w-6 cursor-pointer"
+              className="ml-2 h-6 w-6 cursor-pointer text-thc2"
             />
           </div>
-          <div className="h-full w-full flex justify-end items-center">
+          <div className="flex h-full w-full items-center justify-end">
             <button
               type="button"
-              className="bg-thc2 text-white relative font-normal w-32 px-3 h-10 flex items-center text-sm border-gray-300 rounded border shadow"
+              className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"
             >
               <FontAwesomeIcon
                 icon={faPlus}
-                className="right-0 mr-3 h-6 w-6 absolute"
+                className="absolute right-0 mr-3 h-6 w-6"
               />
               Adicionar
             </button>
@@ -156,7 +156,7 @@ export default function RoomList() {
         </div>
       </div>
       <div className="col-start-2 col-end-12 row-start-2 row-end-7">
-        <table className="h-full w-full bg-thc4 divide-y-2 divide-gray-200 text-sm rounded-xl">
+        <table className="h-full w-full divide-y-2 divide-gray-200 rounded-xl bg-thc4 text-sm">
           <thead>
             <tr>
               <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
@@ -179,24 +179,24 @@ export default function RoomList() {
           <tbody className="text-left">
             {rooms.map((room) => (
               <tr key={room.id} className="border-b">
-                <td className="px-4 py-2 whitespace-nowrap">{room.id}</td>
-                <td className="px-4 py-2 whitespace-nowrap">
+                <td className="whitespace-nowrap px-4 py-2">{room.id}</td>
+                <td className="whitespace-nowrap px-4 py-2">
                   <img src={room.roomPhoto} className="h-16" />
                 </td>
-                <td className="px-4 py-2 whitespace-nowrap">
+                <td className="whitespace-nowrap px-4 py-2">
                   {typeBadge(room.tipo)}
                 </td>
-                <td className="px-4 py-2 whitespace-nowrap">
+                <td className="whitespace-nowrap px-4 py-2">
                   {availabilityBadge(room.availability)}
                 </td>
-                <td className="px-4 py-2 whitespace-nowrap">
+                <td className="whitespace-nowrap px-4 py-2">
                   <FontAwesomeIcon
                     icon={faEye}
-                    className="h-6 w-6 text-blue-700 cursor-pointer"
+                    className="h-6 w-6 cursor-pointer text-blue-700"
                   />
                   <FontAwesomeIcon
                     icon={faTrash}
-                    className="h-6 w-6 ml-2 text-red-700 cursor-pointer"
+                    className="ml-2 h-6 w-6 cursor-pointer text-red-700"
                   />
                 </td>
               </tr>

@@ -5,11 +5,11 @@ import Footer from "./Footer";
 
 export default function LayoutFront() {
   return (
-    <div className="bg-stone-50 h-screen">
-      <div className="fixed w-full z-10">
+    <div className="h-screen bg-stone-50">
+      <div className="fixed z-10 w-full">
         <Header />
       </div>
-      <div className="top-24 inset-0 relative">
+      <div className="relative inset-0 top-24">
         <Outlet />
         <Footer />
       </div>

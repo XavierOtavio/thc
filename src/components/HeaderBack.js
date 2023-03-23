@@ -16,8 +16,8 @@ export default function HeaderBack() {
   const location = useLocation();
 
   return (
-    <div className="h-24 flex justify-around flex-nowrap items-center flex-row content-start bg-thc3">
-      <div className="w-full h-full inline-flex items-center justify-start ml-10">
+    <div className="flex h-24 flex-row flex-nowrap content-start items-center justify-around bg-thc3">
+      <div className="ml-10 inline-flex h-full w-full items-center justify-start">
         <FontAwesomeIcon
           icon={search ? faXmark : faSearch}
           color="white"
@@ -33,12 +33,12 @@ export default function HeaderBack() {
           />
         )}
       </div>
-      <div className="w-full h-full items-center inline-flex justify-around gap-6">
+      <div className="inline-flex h-full w-full items-center justify-around gap-6">
         <Link to="/dashboard">
           <p
-            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
+            className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
               location.pathname === "/dashboard"
-                ? "text-thc2 font-bold"
+                ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
           >
@@ -47,9 +47,9 @@ export default function HeaderBack() {
         </Link>
         <Link to="/dashboard/booking">
           <p
-            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
+            className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
               location.pathname === "/dashboard/booking"
-                ? "text-thc2 font-bold"
+                ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
           >
@@ -58,9 +58,9 @@ export default function HeaderBack() {
         </Link>
         <Link to="/dashboard/rooms">
           <p
-            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
+            className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
               location.pathname === "/dashboard/rooms"
-                ? "text-thc2 font-bold"
+                ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
           >
@@ -68,7 +68,7 @@ export default function HeaderBack() {
           </p>
         </Link>
       </div>
-      <div className="w-full h-full inline-flex items-center justify-center">
+      <div className="inline-flex h-full w-full items-center justify-center">
         <Link to="/" className="h-full">
           <img
             src="https://i.ibb.co/Hhkqd5w/THC-01.png"
@@ -77,12 +77,12 @@ export default function HeaderBack() {
           />
         </Link>
       </div>
-      <div className="w-full h-full inline-flex items-center justify-around gap-6">
+      <div className="inline-flex h-full w-full items-center justify-around gap-6">
         <Link to="/dashboard/checkin">
           <p
-            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
+            className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
               location.pathname === "/dashboard/checkin"
-                ? "text-thc2 font-bold"
+                ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
           >
@@ -91,9 +91,9 @@ export default function HeaderBack() {
         </Link>
         <Link to="/dashboard/checkout">
           <p
-            className={`hover:border-thc1 hover:bg-thc1 hover:text-white hover:font-bold rounded-xl p-4 cursor-pointer ${
+            className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
               location.pathname === "/dashboard/checkout"
-                ? "text-thc2 font-bold"
+                ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
           >
@@ -101,16 +101,16 @@ export default function HeaderBack() {
           </p>
         </Link>
       </div>
-      <div className="w-full h-full flex flex-col items-end justify-start mr-10">
+      <div className="mr-10 flex h-full w-full flex-col items-end justify-start">
         <button
           id="dropdownDividerButton"
-          className="h-full w-40 flex items-center justify-center gap-2"
+          className="flex h-full w-40 items-center justify-center gap-2"
           type="button"
           onClick={() => setOpenMenu(!openMenu)}
         >
           <img
             src="https://cdn.discordapp.com/attachments/1082425024104894666/1082799435727253584/xSVMV6xD9Cf7K56wjeEF--1--2htnr.jpg"
-            className="rounded-3xl h-full py-5"
+            className="h-full rounded-3xl py-5"
             alt="adminLogo"
           />
           <FontAwesomeIcon icon={faAngleDown} color="white" size="lg" />
@@ -119,7 +119,7 @@ export default function HeaderBack() {
           <div
             className={`z-10 ${
               openMenu ? "" : "hidden"
-            } bg-white divide-y divide-gray-100 text-left rounded-lg shadow w-44`}
+            } w-44 divide-y divide-gray-100 rounded-lg bg-white text-left shadow`}
           >
             <div className="py-2">
               <p className="block px-4 py-2 text-xs text-gray-500">

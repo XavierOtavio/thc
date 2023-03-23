@@ -13,29 +13,29 @@ export default function RoomDetails() {
             <img
               alt="Party"
               src="https://hotelemile.com/_novaimg/galleria/1493923.jpg"
-              class="absolute inset-0 h-full w-full object-cover rounded-md"
+              class="absolute inset-0 h-full w-full rounded-md object-cover"
             />
           </div>
 
           <div class="lg:py-16">
-            <article class="space-y-4 text-gray-600 text-left ">
+            <article class="space-y-4 text-left text-gray-600 ">
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                 Detalhes:
               </h2>
-              <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <ul class="max-w-md list-inside list-disc space-y-1 text-gray-500 dark:text-gray-400">
                 <li>Piso 4, Ala 2, Porta 0402</li>
                 <li>40m2</li>
                 <li>
                   1 cama solteiro, 1 armário, 1 cómoda, 1 mesinha de cabeceira
                 </li>
               </ul>
-              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white text-left">
+              <h2 class="mb-2 text-left text-lg font-semibold text-gray-900 dark:text-white">
                 Detalhes:
               </h2>
-              <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+              <ul class="max-w-md list-inside space-y-1 text-gray-500 dark:text-gray-400">
                 <li class="flex items-center">
                   <svg
-                    class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export default function RoomDetails() {
                 </li>
                 <li class="flex items-center">
                   <svg
-                    class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export default function RoomDetails() {
                 </li>
                 <li class="flex items-center">
                   <svg
-                    class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export default function RoomDetails() {
                 </li>
                 <li class="flex items-center">
                   <svg
-                    class="w-4 h-4 mr-1.5 text-gray-400 flex-shrink-0"
+                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

@@ -54,14 +54,14 @@ function Home() {
 
         <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div class="max-w-6xl text-center sm:text-left">
-            <h1 class="text-3xl font-serif sm:text-5xl text-white">
+            <h1 class="font-serif text-3xl text-white sm:text-5xl">
               Bem vindo ao
               <strong class="block font-serif text-thc1">
                 Luxuoso Hotel THC
               </strong>
             </h1>
 
-            <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed text-white bg-thc">
+            <p class="bg-thc mt-4 max-w-lg text-white sm:text-xl sm:leading-relaxed">
               Cozinha e moveis feito à medida por encomenda para corresponder às
               suas necessidades
             </p>
@@ -75,7 +75,7 @@ function Home() {
               >
                 <FontAwesomeIcon
                   icon={faCalendarDays}
-                  className="h-5 w-5 text-gray-500 mr-4"
+                  className="mr-4 h-5 w-5 text-gray-500"
                 />
                 {`${format(date[0].startDate, "dd/MM/yyyy")} até ${format(
                   date[0].endDate,
@@ -92,7 +92,7 @@ function Home() {
                 />
               )}
               <button
-                className={`flex relative h-10 rounded bg-white py-2 px-9 align-middle text-gray-500 hover:cursor-pointer ${
+                className={`relative flex h-10 rounded bg-white py-2 px-9 align-middle text-gray-500 hover:cursor-pointer ${
                   openQuantityOptions ? "ring-1 ring-thc1" : "border shadow-sm"
                 }`}
                 type="button"
@@ -149,7 +149,7 @@ function Home() {
 
               <div>
                 <NavLink to="/roomsearch">
-                  <button className="ml-2 h-10 rounded bg-thc1 py-2 px-3 align-middle flex text-white  hover:cursor-pointer hover:bg-thc2">
+                  <button className="ml-2 flex h-10 rounded bg-thc1 py-2 px-3 align-middle text-white  hover:cursor-pointer hover:bg-thc2">
                     <FontAwesomeIcon
                       icon={faMagnifyingGlass}
                       color="white"
@@ -168,10 +168,10 @@ function Home() {
         <div class="bg-white">
           <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-3xl text-center">
-              <h1 class="mt-2 text-3xl font-serif text-gray-900 sm:text-4xl">
+              <h1 class="mt-2 font-serif text-3xl text-gray-900 sm:text-4xl">
                 - Hotel Tio Honório Colaço -
               </h1>
-              <h2 class="text-base font-light uppercase tracking-wide text-gray-500 mt-4">
+              <h2 class="mt-4 text-base font-light uppercase tracking-wide text-gray-500">
                 Bem-vindo ao hotel ideal para fugir da rotina diária.
                 <p>
                   {" "}
@@ -189,7 +189,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div class="grid gap-1 grid-cols-2 ml-16 mr-16 mb-16">
+        <div class="ml-16 mr-16 mb-16 grid grid-cols-2 gap-1">
           <img
             alt="Les Paul"
             src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -292,7 +292,7 @@ function Home() {
               Descubra os nossos serviços
             </h2>
 
-            <p class="mt-4 text-gray-500 font-thin">
+            <p class="mt-4 font-thin text-gray-500">
               O nosso hotel oferece uma grande variedade de serviços para que se
               sinta em casa. Desde o pequeno-almoço até ao serviço de quartos,
               passando pelo bar e restaurante, temos tudo o que precisa para uma
@@ -301,9 +301,9 @@ function Home() {
             </p>
           </div>
 
-          <div class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3 text-left">
+          <div class="mt-8 grid grid-cols-1 gap-8 text-left md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
             <div class="flex items-start gap-4">
-              <FontAwesomeIcon icon={faWifi} className="text-thc1 h-8 w-8" />
+              <FontAwesomeIcon icon={faWifi} className="h-8 w-8 text-thc1" />
 
               <div>
                 <h2 class="text-lg font-bold">Wi-Fi</h2>
@@ -319,7 +319,7 @@ function Home() {
             <div class="flex items-start gap-4">
               <FontAwesomeIcon
                 icon={faSquareParking}
-                className="text-thc1 h-8 w-8"
+                className="h-8 w-8 text-thc1"
               />
 
               <div>
@@ -338,7 +338,7 @@ function Home() {
             <div class="flex items-start gap-4">
               <FontAwesomeIcon
                 icon={faUtensils}
-                className="text-thc1 h-8 w-8"
+                className="h-8 w-8 text-thc1"
               />
 
               <div>
@@ -355,7 +355,7 @@ function Home() {
             <div class="flex items-start gap-4">
               <FontAwesomeIcon
                 icon={faPersonSwimming}
-                className="text-thc1 h-8 w-8"
+                className="h-8 w-8 text-thc1"
               />
 
               <div>
@@ -375,7 +375,7 @@ function Home() {
             <div class="flex items-start gap-4">
               <FontAwesomeIcon
                 icon={faDumbbell}
-                className="text-thc1 h-8 w-8"
+                className="h-8 w-8 text-thc1"
               />
 
               <div>
@@ -394,7 +394,7 @@ function Home() {
             <div class="flex items-start gap-4">
               <FontAwesomeIcon
                 icon={faBellConcierge}
-                className="text-thc1 h-8 w-8"
+                className="h-8 w-8 text-thc1"
               />
 
               <div>

@@ -1,14 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import Logotipo from "./Logotipo";
 
 function Header() {
   const location = useLocation();
   return (
-    <div className=" h-24 justify-center items-center flex bg-thc3">
+    <div className=" flex h-24 items-center justify-center bg-thc3">
       <Link
         to="/"
-        className="w-auto h-full flex align-baseline justify-start ml-3 "
+        className="ml-3 flex h-full w-auto justify-start align-baseline "
       >
         <img
           src="https://i.ibb.co/tQbJSSQ/logo-01.png"
@@ -16,25 +15,25 @@ function Header() {
           border="0"
         />
       </Link>
-      <div className="w-full flex align-baseline justify-end ml-2 mr-3">
+      <div className="ml-2 mr-3 flex w-full justify-end align-baseline">
         <Link to="/">
           <button
             // class="block border border-red-600  px-10 py-3 text-red-600 ml-2 font-medium hover:border-red-600 hover:bg-red-600 hover:text-white"
             className={`${
               location.pathname === "/" ? "bg-thc1 text-white" : "text-thc2"
-            } block rounded px-10 py-3 ml-2 font-medium hover:border-thc1 hover:bg-thc1 hover:text-white`}
+            } ml-2 block rounded px-10 py-3 font-medium hover:border-thc1 hover:bg-thc1 hover:text-white`}
           >
             Home
           </button>
         </Link>
 
         <Link to="/dashboard">
-          <button class="block rounded px-10 py-3 text-thc2 ml-2 font-medium hover:border-thc1 hover:bg-thc1 hover:text-white">
+          <button class="ml-2 block rounded px-10 py-3 font-medium text-thc2 hover:border-thc1 hover:bg-thc1 hover:text-white">
             Dashboard
           </button>
         </Link>
         <Link to="/login">
-          <button class="block rounded px-10 py-3 text-thc2 ml-2 font-medium hover:border-thc1 hover:bg-thc1 hover:text-white">
+          <button class="ml-2 block rounded px-10 py-3 font-medium text-thc2 hover:border-thc1 hover:bg-thc1 hover:text-white">
             Login
           </button>
         </Link>

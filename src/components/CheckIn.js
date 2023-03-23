@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function CheckIn() {
   const [booking, setBooking] = useState({
@@ -27,17 +27,21 @@ export default function CheckIn() {
   };
 
   return (
-    <div className="h-full w-full grid grid-cols-12 grid-rows-6">
-      <div className="col-start-2 col-end-12 row-start-2 row-end-6 bg-thc4 rounded-lg shadow-lg">
-        <div className="h-full w-full flex flex-col justify-center items-center py-16  px-32">
-          <div className="h-full w-1/2 flex flex-col justify-center items-start gap-8 relative">
-            <h1 className="text-2xl font-bold text-gray-900 top-0 absolute uppercase font-mono">
-              Check-in
-            </h1>
-            <div className="flex flex-col justify-start items-start w-full">
+    <div className="grid h-full w-full grid-cols-12 grid-rows-6">
+      <div className="col-start-2 col-end-12 row-start-2 row-end-6 rounded-lg bg-thc4 shadow-lg">
+        <div className="relative flex h-full w-full flex-col items-center justify-center py-16 px-32">
+          <h1 className="absolute flex h-full w-full items-center justify-center font-mono text-6xl font-bold uppercase text-gray-900">
+            <div className="absolute left-0 h-full w-32 rounded-l-lg bg-thc3">
+              <span className="flex h-full -rotate-90 transform items-center justify-center whitespace-nowrap text-white ">
+                Check-in
+              </span>
+            </div>
+          </h1>
+          <div className="relative flex h-full w-1/2 flex-col items-center justify-start gap-8">
+            <div className="flex w-full flex-col items-start justify-start">
               <label
                 htmlFor="booking"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="mb-2 block text-sm font-medium text-gray-900"
               >
                 Escolha a reserva
               </label>
@@ -48,7 +52,7 @@ export default function CheckIn() {
                 onChange={(e) => {
                   handleBooking(e);
                 }}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
               >
                 <option value={0} disabled>
                   Escolha uma reserva
@@ -58,10 +62,10 @@ export default function CheckIn() {
                 <option value={3}>Reserva 3</option>
               </select>
             </div>
-            <div className="flex flex-col justify-start items-start w-full">
+            <div className="flex w-full flex-col items-start justify-start">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="mb-2 block text-sm font-medium text-gray-900"
               >
                 Nome
               </label>
@@ -69,15 +73,15 @@ export default function CheckIn() {
                 type="text"
                 name="name"
                 id="name"
-                className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-500 focus:border-blue-500 focus:ring-blue-500"
                 disabled
                 value={booking.name}
               />
             </div>
-            <div className="flex flex-col justify-start items-start w-full">
+            <div className="flex w-full flex-col items-start justify-start">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="mb-2 block text-sm font-medium text-gray-900"
               >
                 Quarto
               </label>
@@ -85,15 +89,15 @@ export default function CheckIn() {
                 type="text"
                 name="name"
                 id="name"
-                className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-500 focus:border-blue-500 focus:ring-blue-500"
                 disabled
                 value={booking.room}
               />
             </div>
-            <div className="bottom-0 absolute w-full flex justify-center items-center">
+            <div className="absolute bottom-0 flex w-full items-center justify-center">
               <button
                 type="button"
-                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full"
+                className="inline-flex w-full justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 Aprovar Check-in
               </button>
