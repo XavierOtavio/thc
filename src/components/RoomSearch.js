@@ -83,7 +83,6 @@ function RoomSearch() {
                 )}`}
               </button>
 
-              
               {openDate && (
                 <DateRange
                   editableDateInputs={true}
@@ -173,15 +172,15 @@ function RoomSearch() {
                 <img
                   alt="House"
                   src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
-                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                  class="absolute inset-0 aspect-video h-full w-full rounded-lg object-cover shadow-lg"
                 />
               </div>
             </div>
 
-            <div class="relative flex items-center bg-thc4 rounded-r-lg">
-              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+            <div class="relative flex items-center rounded-r-lg bg-thc4/30">
+              <span class="hidden rounded-l-lg lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 lg:bg-thc4/30"></span>
 
-              <div class="px-32 sm:p-16 lg:py-16 text-left">
+              <div class="px-32 text-left sm:p-16 lg:py-16">
                 <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">
                   Quarto Presidencial
                 </h2>
@@ -201,21 +200,21 @@ function RoomSearch() {
                   <FontAwesomeIcon icon={faFan} />
                 </p>
 
-                <p class="mt-4 text-gray-600 mb-3">
+                <p class="mt-4 mb-3 text-gray-600">
                   Quarto com zona de estar espaçosa com secretária e sofá e
                   varanda. O quarto tem cama de...
                 </p>
 
-                <div className="w-full justify-end flex">
+                <div className="flex w-full justify-end">
                   <span class="text-2xl font-bold text-thc1 ">1.000,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
                 <Link
-                  to="/room"
-                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                  to="/roomdetails/1"
+                  class="mt-8 flex w-full justify-center rounded border border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
                 >
-                  Adicionar ao carrinho
+                  Ver detalhes
                 </Link>
               </div>
             </div>
@@ -228,15 +227,15 @@ function RoomSearch() {
                 <img
                   alt="House"
                   src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
-                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                  class="absolute inset-0 aspect-video h-full w-full rounded-lg object-cover shadow-lg"
                 />
               </div>
             </div>
 
-            <div class="relative flex items-center bg-thc4 rounded-r-lg">
-              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+            <div class="relative flex items-center rounded-r-lg bg-thc4/30">
+              <span class="hidden rounded-l-lg lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 lg:bg-thc4/30"></span>
 
-              <div class="px-32 sm:p-16 lg:py-16 text-left">
+              <div class="px-32 text-left sm:p-16 lg:py-16">
                 <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">
                   Quarto de Casal
                 </h2>
@@ -254,21 +253,21 @@ function RoomSearch() {
                   <FontAwesomeIcon icon={faFan} />
                 </p>
 
-                <p class="mt-4 text-gray-600 mb-5">
+                <p class="mt-4 mb-5 text-gray-600">
                   Com um quarto com cama de casal, a suite dispõe de wi-fi, uma
                   sala de estar com...
                 </p>
 
-                <div className="w-full justify-end flex">
+                <div className="flex w-full justify-end">
                   <span class="text-2xl font-bold text-thc1 ">250,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
                 <Link
-                  to="/room"
-                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                  to="/roomdetails/2"
+                  class="mt-8 flex w-full justify-center rounded border border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
                 >
-                  Adicionar ao carrinho
+                  Ver detalhes
                 </Link>
               </div>
             </div>
@@ -281,15 +280,15 @@ function RoomSearch() {
                 <img
                   alt="House"
                   src="https://hotelemile.com/_novaimg/galleria/1493923.jpg"
-                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                  class="absolute inset-0 aspect-video h-full w-full rounded-lg object-cover shadow-lg"
                 />
               </div>
             </div>
 
-            <div class="relative flex items-center bg-thc4 rounded-r-lg">
-              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+            <div class="relative flex items-center rounded-r-lg bg-thc4/30">
+              <span class="hidden rounded-l-lg lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 lg:bg-thc4/30"></span>
 
-              <div class="px-32 sm:p-16 lg:py-16 text-left">
+              <div class="px-32 text-left sm:p-16 lg:py-16">
                 <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">
                   Quarto Individual
                 </h2>
@@ -306,21 +305,21 @@ function RoomSearch() {
                   <FontAwesomeIcon icon={faFan} />
                 </p>
 
-                <p class="mt-4 text-gray-600 mb-5">
+                <p class="mt-4 mb-5 text-gray-600">
                   Localizados do 3º ao 6º piso do hotel, este quarto têm uma
                   varanda com vista plena sobre...
                 </p>
 
-                <div className="w-full justify-end flex">
+                <div className="flex w-full justify-end">
                   <span class="text-2xl font-bold text-thc1 ">150,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
                 <Link
-                  to="/room"
-                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                  to="/roomdetails/3"
+                  class="mt-8 flex w-full justify-center rounded border border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
                 >
-                  Adicionar ao carrinho
+                  Ver detalhes
                 </Link>
               </div>
             </div>
@@ -333,15 +332,15 @@ function RoomSearch() {
                 <img
                   alt="House"
                   src="https://cdn-hweb.hsystem.com.br/603e8a92acb6940aa8b6bc13/4459f7a96dca47318f3cf31c16b86e98.jpg"
-                  class="absolute inset-0 h-full aspect-video w-full object-cover rounded-lg shadow-lg"
+                  class="absolute inset-0 aspect-video h-full w-full rounded-lg object-cover shadow-lg"
                 />
               </div>
             </div>
 
-            <div class="relative flex items-center bg-thc4 rounded-r-lg">
-              <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 rounded-l-lg lg:bg-thc4"></span>
+            <div class="relative flex items-center rounded-r-lg bg-thc4/30">
+              <span class="hidden rounded-l-lg lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 lg:bg-thc4/30"></span>
 
-              <div class="px-32 sm:p-16 lg:py-16 text-left">
+              <div class="px-32 text-left sm:p-16 lg:py-16">
                 <h2 class="text-2xl font-bold text-thc3 sm:text-3xl">Suite</h2>
 
                 <p class="mt-4 text-gray-600">
@@ -359,21 +358,21 @@ function RoomSearch() {
                   <FontAwesomeIcon icon={faFan} />
                 </p>
 
-                <p class="mt-4 text-gray-600 mb-3">
+                <p class="mt-4 mb-3 text-gray-600">
                   Suite com zona de estar espaçosa com secretária e sofá e
                   varanda. O quarto tem cama de...
                 </p>
 
-                <div className="w-full justify-end flex">
+                <div className="flex w-full justify-end">
                   <span class="text-2xl font-bold text-thc1 ">700,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
                 <Link
-                  to="/room"
-                  class="mt-8 rounded border w-full justify-center flex border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
+                  to="/roomdetails/4"
+                  class="mt-8 flex w-full justify-center rounded border border-thc1 bg-thc1 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-thc1 focus:outline-none focus:ring active:text-thc1"
                 >
-                  Adicionar ao carrinho
+                  Ver detalhes
                 </Link>
               </div>
             </div>
@@ -385,4 +384,3 @@ function RoomSearch() {
 }
 
 export default RoomSearch;
-
