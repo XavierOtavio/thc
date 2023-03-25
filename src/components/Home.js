@@ -249,7 +249,7 @@ function Home() {
             <div class="lg:col-span-2 lg:py-8">
               <ul class="grid grid-cols-2 gap-4">
                 <li>
-                  <Link to="#" class="group block">
+                  <Link to="/roomdetails/1" class="group block">
                     <img
                       src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
                       alt=""
@@ -265,7 +265,7 @@ function Home() {
                 </li>
 
                 <li>
-                  <Link to="#" class="group block">
+                  <Link to="/roomdetails/2" class="group block">
                     <img
                       src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
                       alt=""

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -18,6 +18,7 @@ import {
   faBath,
   faFan,
   faBed,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 function RoomDetailsFront() {
@@ -30,6 +31,7 @@ function RoomDetailsFront() {
         setRoomData({
           id: "0001",
           name: "Quarto Presidencial",
+          capacity: 4,
           roomPhoto:
             "https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg",
           availability: "available",
@@ -43,10 +45,13 @@ function RoomDetailsFront() {
         setRoomData({
           id: "0002",
           name: "Quarto de Casal",
+          capacity: 2,
           pricenight: "210",
           roomPhoto:
             "https://www.hotelgarance.com/_novaimg/galleria/342681.jpg",
           availability: "available",
+          description:
+            "Quarto com cama de casal e casa de banho privada. Conta com uma varanda com vista para o rio Tejo. O quarto tem uma área de 40 m2.",
           phone: "912345678",
         });
         break;
@@ -54,8 +59,11 @@ function RoomDetailsFront() {
         setRoomData({
           id: "0001",
           name: "Quarto Individual",
+          capacity: 1,
           roomPhoto: "https://hotelemile.com/_novaimg/galleria/1493923.jpg",
           availability: "available",
+          description:
+            "Localizados do 3º ao 6º piso do hotel, este quarto têm uma varanda com vista plena sobre o rio Tejo. O quarto tem uma área de 25 m2 mais 5 m2 de varanda.",
           pricenight: "120",
           phone: "912345678",
         });
@@ -64,6 +72,7 @@ function RoomDetailsFront() {
         setRoomData({
           id: "0003",
           name: "Suite",
+          capacity: 4,
           pricenight: "400",
           roomPhoto:
             "https://cdn-hweb.hsystem.com.br/603e8a92acb6940aa8b6bc13/4459f7a96dca47318f3cf31c16b86e98.jpg",
@@ -79,8 +88,59 @@ function RoomDetailsFront() {
     console.log(id[1]);
   }, []);
 
+  const capacityIcons = (capacity) => {
+    switch (capacity) {
+      case 1:
+        return (
+          <div class="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faUser} />
+            <span>1</span>
+          </div>
+        );
+        break;
+      case 2:
+        return (
+          <div class="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />
+            <span>2</span>
+          </div>
+        );
+        break;
+      case 3:
+        return (
+          <div class="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />
+            <span>3</span>
+          </div>
+        );
+        break;
+      case 4:
+        return (
+          <div class="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />
+            <span>4</span>
+          </div>
+        );
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <div>
+      <Link to="/">
+        <button>
+          <FontAwesomeIcon icon={faXmark} />
+        </button>
+      </Link>
       <section>
         <div class="relative mx-auto max-w-screen-xl px-4 py-8">
           <div class="grid gap-8 lg:grid-cols-4 lg:items-start">
@@ -198,14 +258,11 @@ function RoomDetailsFront() {
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 </div>
-                <div class="text-left">
-                  <p class="mt-4 text-gray-600">
-                    {" "}
-                    Capacidade: <FontAwesomeIcon icon={faUser} />{" "}
-                    <FontAwesomeIcon icon={faUser} />{" "}
-                    <FontAwesomeIcon icon={faUser} />{" "}
-                    <FontAwesomeIcon icon={faUser} />
-                  </p>
+                <div class=" text-left">
+                  <div class="mt-4 flex space-x-2 text-gray-600">
+                    <span>Capacidade:</span>
+                    {capacityIcons(roomData.capacity)}
+                  </div>
 
                   <p class="mt-4 text-gray-600">
                     Serviços incluídos: <FontAwesomeIcon icon={faWifi} />
@@ -219,33 +276,29 @@ function RoomDetailsFront() {
                   <legend class="text-left text-lg font-bold">
                     Serviços Adicionais +
                   </legend>
-
-                  <div class="mt-2 flex flex-wrap gap-1">
-                    <label for="material_cotton" class="cursor-pointer">
-                      <input
-                        type="radio"
-                        id="material_cotton"
-                        name="material"
-                        class="peer sr-only"
-                        checked
-                      />
-
-                      <span class="block rounded-full border border-gray-200 px-3 py-1 text-xs peer-checked:bg-gray-100">
-                        Cotton
+                  <div class="mt-2 flex gap-1">
+                    <label class="cursor-pointer ">
+                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-lg">
+                        <input
+                          type="checkbox"
+                          id="material_cotton"
+                          name="material"
+                          class="mr-3 "
+                        />
+                        Teste 1
                       </span>
                     </label>
-
-                    <label for="material_wool" class="cursor-pointer">
-                      <input
-                        type="radio"
-                        id="material_wool"
-                        name="material"
-                        class="peer sr-only"
-                        checked
-                      />
-
-                      <span class="block rounded-full border border-gray-200 px-3 py-1 text-xs peer-checked:bg-gray-100">
-                        Wool
+                  </div>
+                  <div class="mt-2 flex gap-1">
+                    <label class="cursor-pointer ">
+                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-lg">
+                        <input
+                          type="checkbox"
+                          id="material_cotton1"
+                          name="material1"
+                          class="mr-3"
+                        />
+                        Teste 2
                       </span>
                     </label>
                   </div>
@@ -253,15 +306,13 @@ function RoomDetailsFront() {
 
                 <div class="rounded border bg-gray-100 p-4">
                   <p class="text-sm">
-                    <span class="block">
-                      {" "}
-                      Pay as low as $3/mo with 0% APR.{" "}
-                    </span>
-
-                    <a href="" class="mt-1 inline-block underline">
-                      {" "}
+                    <span class="block"> Poupa até 20% com o código vski!</span>
+                    <Link
+                      to="https://www.facebook.com/Tiagovski555/posts/2945153248845448/?locale=zh_CN"
+                      class="mt-1 inline-block underline"
+                    >
                       Find out more{" "}
-                    </a>
+                    </Link>{" "}
                   </p>
                 </div>
 
@@ -274,13 +325,6 @@ function RoomDetailsFront() {
                   class="w-full rounded bg-thc1 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white"
                 >
                   Adicionar ao carrinho
-                </button>
-
-                <button
-                  type="button"
-                  class="w-full rounded border border-gray-300 bg-gray-100 px-6 py-3 text-sm font-bold uppercase tracking-wide"
-                >
-                  Notify when on sale
                 </button>
               </form>
             </div>

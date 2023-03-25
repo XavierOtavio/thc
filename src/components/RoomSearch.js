@@ -206,7 +206,7 @@ function RoomSearch() {
                 </p>
 
                 <div className="flex w-full justify-end">
-                  <span class="text-2xl font-bold text-thc1 ">1.000,00€</span>
+                  <span class="text-2xl font-bold text-thc1 ">680,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
@@ -254,12 +254,12 @@ function RoomSearch() {
                 </p>
 
                 <p class="mt-4 mb-5 text-gray-600">
-                  Com um quarto com cama de casal, a suite dispõe de wi-fi, uma
-                  sala de estar com...
+                  Quarto com cama de casal e casa de banho privada. Conta com
+                  uma varanda...
                 </p>
 
                 <div className="flex w-full justify-end">
-                  <span class="text-2xl font-bold text-thc1 ">250,00€</span>
+                  <span class="text-2xl font-bold text-thc1 ">210,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
@@ -311,7 +311,7 @@ function RoomSearch() {
                 </p>
 
                 <div className="flex w-full justify-end">
-                  <span class="text-2xl font-bold text-thc1 ">150,00€</span>
+                  <span class="text-2xl font-bold text-thc1 ">120,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
@@ -364,7 +364,7 @@ function RoomSearch() {
                 </p>
 
                 <div className="flex w-full justify-end">
-                  <span class="text-2xl font-bold text-thc1 ">700,00€</span>
+                  <span class="text-2xl font-bold text-thc1 ">400,00€</span>
                   <span class="text-sm font-medium text-gray-500">/noite</span>
                 </div>
 
