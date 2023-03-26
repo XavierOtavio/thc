@@ -18,7 +18,8 @@ import {
   faBath,
   faFan,
   faBed,
-  faXmark,
+  faX,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 function RoomDetailsFront() {
@@ -136,11 +137,6 @@ function RoomDetailsFront() {
 
   return (
     <div>
-      <Link to="/">
-        <button>
-          <FontAwesomeIcon icon={faXmark} />
-        </button>
-      </Link>
       <section>
         <div class="relative mx-auto max-w-screen-xl px-4 py-8">
           <div class="grid gap-8 lg:grid-cols-4 lg:items-start">
@@ -326,6 +322,15 @@ function RoomDetailsFront() {
                 >
                   Adicionar ao carrinho
                 </button>
+                <Link to="/roomsearch">
+                  <button
+                    type="button"
+                    class="mt-3 w-full rounded border border-gray-300 bg-gray-100 px-6 py-3 text-sm font-bold uppercase tracking-wide"
+                  >
+                    <FontAwesomeIcon icon={faArrowLeft} className="mr-3" />
+                    Voltar
+                  </button>
+                </Link>
               </form>
             </div>
 
