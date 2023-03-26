@@ -169,7 +169,7 @@ export default function Booking() {
               />
               <input
                 className="flex h-10 w-64 items-center rounded border border-gray-300 bg-white pl-10 text-sm font-normal text-gray-400 shadow focus:outline-none focus:ring focus:ring-thc2"
-                placeholder="Por id ou nome do cliente"
+                placeholder="Por id, nif ou nome do cliente"
               />
             </div>
             <div className="relative ml-10 flex items-center">
