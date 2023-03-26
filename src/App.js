@@ -11,6 +11,8 @@ import RoomDetails from "./components/RoomDetails";
 import RoomSearch from "./components/RoomSearch";
 import CheckIn from "./components/CheckIn";
 import CheckOut from "./components/CheckOut";
+import RoomDetailsFront from "./components/RoomDetailsFront";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/" element={<LayoutFront />}>
             <Route index element={<Home />} />
             <Route path="/roomsearch" element={<RoomSearch />} />
+            <Route path="/roomdetails/:1" element={<RoomDetailsFront />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
           <Route path="/dashboard" element={<LayoutBack />}>
             <Route index element={<h1>Dashboard</h1>} />

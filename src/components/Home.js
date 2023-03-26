@@ -61,9 +61,8 @@ function Home() {
               </strong>
             </h1>
 
-            <p class="bg-thc mt-4 max-w-lg text-white sm:text-xl sm:leading-relaxed">
-              Cozinha e moveis feito à medida por encomenda para corresponder às
-              suas necessidades
+            <p class="bg-thc mt-4 max-w-lg font-thin text-white sm:text-xl sm:leading-relaxed">
+              Descobre já onde vais passar as tuas próximas férias.
             </p>
             <form className="flex">
               <button
@@ -171,7 +170,7 @@ function Home() {
               <h1 class="mt-2 font-serif text-3xl text-gray-900 sm:text-4xl">
                 - Hotel Tio Honório Colaço -
               </h1>
-              <h2 class="mt-4 text-base font-light uppercase tracking-wide text-gray-500">
+              <h2 class="mt-4 text-base font-light  tracking-wide text-gray-500">
                 Bem-vindo ao hotel ideal para fugir da rotina diária.
                 <p>
                   {" "}
@@ -250,7 +249,7 @@ function Home() {
             <div class="lg:col-span-2 lg:py-8">
               <ul class="grid grid-cols-2 gap-4">
                 <li>
-                  <Link to="#" class="group block">
+                  <Link to="/roomdetails/1" class="group block">
                     <img
                       src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
                       alt=""
@@ -266,7 +265,7 @@ function Home() {
                 </li>
 
                 <li>
-                  <Link to="#" class="group block">
+                  <Link to="/roomdetails/2" class="group block">
                     <img
                       src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
                       alt=""
@@ -311,7 +310,7 @@ function Home() {
                 <p class="mt-1 text-sm text-gray-500">
                   Gratuito em todo o hotel. Dispomos de uma rede de Wi-Fi de
                   alta velocidade (10Gbps) em todo o hotel, para que possa
-                  navegar sem preocupações. Avaliado pela OF com 5 estrelas.
+                  navegar sem preocupações. Avaliado pela Deco com 5 estrelas.
                 </p>
               </div>
             </div>
@@ -364,7 +363,7 @@ function Home() {
                 <p class="mt-1 text-sm text-gray-500">
                   Piscinas exteriores e interiores. Horário de funcionamento:
                   9h00 - 22h00. A piscina exterior está aberta de Abril a
-                  Outubro. Piscinas certificas pela OF com 5 estrelas pois
+                  Outubro. Piscinas certificas pela Deco com 5 estrelas pois
                   cumprem com todos os requisitos de segurança e não apresentam
                   riscos para a saúde dos utilizadores tais como a presença de
                   bactérias, fungos, algas, e urina.

@@ -6,7 +6,7 @@ import Footer from "./Footer";
 export default function LayoutFront() {
   return (
     <div className="h-screen bg-stone-50">
-      <div className="fixed z-10 w-full">
+      <div className="fixed z-20 w-full">
         <Header />
       </div>
       <div className="relative inset-0 top-24">
