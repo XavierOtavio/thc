@@ -216,11 +216,12 @@ export default function BookingDetail() {
               }
             </p>
             <div className="flex flex-row gap-2 py-2">
+              <label className=" text-base">Quarto: </label>
+              <p className="flex flex-col">{Booking.room}</p>
+            </div>
+            <div className="flex flex-row gap-2 py-2">
               <label className=" text-base">Reserva: </label>
-              <p className="flex flex-col">
-                {showProducts()}
-                {` Quarto:${Booking.room}`}
-              </p>
+              <p className="flex flex-col">{showProducts()}</p>
             </div>
           </div>
           <div className="col-span-12 row-span-3 m-2 flex flex-col rounded-lg bg-stone-200 px-16 py-8">
