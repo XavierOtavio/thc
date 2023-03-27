@@ -16,6 +16,7 @@ import Cart from "./components/Cart";
 import BookingDetail from "./components/BookingDetail";
 import AddRoom from "./components/AddRoom";
 import ClientsList from "./components/ClientsList";
+import Dashboard from "./components/Dashboard";
 function App() {
   return (
     <div className="App">
@@ -28,7 +29,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
           </Route>
           <Route path="/dashboard" element={<LayoutBack />}>
-            <Route index element={<h1>Dashboard</h1>} />
+            <Route index element={<Dashboard />} />
             <Route path="bookings" element={<Booking />} />
             <Route path="bookings/:id" element={<BookingDetail />} />
             <Route path="checkin" element={<CheckIn />} />

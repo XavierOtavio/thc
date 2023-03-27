@@ -9,6 +9,9 @@ module.exports = {
         thc3: "#0f172a",
         thc4: "#d6d3d1",
       },
+      fontFamily: {
+        ubuntu: ["Ubuntu", "sans-serif"],
+      },
     },
   },
   plugins: [],
