@@ -14,7 +14,7 @@ import CheckOut from "./components/CheckOut";
 import RoomDetailsFront from "./components/RoomDetailsFront";
 import Cart from "./components/Cart";
 import BookingDetail from "./components/BookingDetail";
-
+import AddRoom from "./components/AddRoom";
 function App() {
   return (
     <div className="App">
@@ -34,6 +34,7 @@ function App() {
             <Route path="checkout" element={<CheckOut />} />
             <Route path="rooms" element={<Rooms />} />
             <Route path="rooms/:id" element={<RoomDetails />} />
+            <Route path="rooms/addroom" element={<AddRoom />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

@@ -142,16 +142,18 @@ export default function RoomList() {
             />
           </div>
           <div className="flex h-full w-full items-center justify-end">
-            <button
-              type="button"
-              className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"
-            >
-              <FontAwesomeIcon
-                icon={faPlus}
-                className="absolute right-0 mr-3 h-6 w-6"
-              />
-              Adicionar
-            </button>
+            <Link to={"/dashboard/rooms/addroom"}>
+              <button
+                type="button"
+                className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"
+              >
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  className="absolute right-0 mr-3 h-6 w-6"
+                />
+                Adicionar
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -190,10 +192,12 @@ export default function RoomList() {
                   {availabilityBadge(room.availability)}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    className="h-6 w-6 cursor-pointer text-blue-700"
-                  />
+                  <Link to={"/dashboard/rooms/:id"}>
+                    <FontAwesomeIcon
+                      icon={faEye}
+                      className="h-6 w-6 cursor-pointer text-blue-700"
+                    />
+                  </Link>
                   <FontAwesomeIcon
                     icon={faTrash}
                     className="ml-2 h-6 w-6 cursor-pointer text-red-700"
