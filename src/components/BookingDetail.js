@@ -218,7 +218,7 @@ export default function BookingDetail() {
             <div className="flex flex-row gap-2 py-2">
               <label className=" text-base">Reserva: </label>
               <p className="flex flex-col">
-                {showProducts() + " " + Booking.room}
+                {showProducts()} {Booking.room}
               </p>
             </div>
           </div>
