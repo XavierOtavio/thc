@@ -15,6 +15,7 @@ import RoomDetailsFront from "./components/RoomDetailsFront";
 import Cart from "./components/Cart";
 import BookingDetail from "./components/BookingDetail";
 import AddRoom from "./components/AddRoom";
+import ClientsList from "./components/ClientsList";
 function App() {
   return (
     <div className="App">
@@ -35,6 +36,7 @@ function App() {
             <Route path="rooms" element={<Rooms />} />
             <Route path="rooms/:id" element={<RoomDetails />} />
             <Route path="rooms/addroom" element={<AddRoom />} />
+            <Route path="clientslist" element={<ClientsList />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
