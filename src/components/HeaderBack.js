@@ -45,7 +45,7 @@ export default function HeaderBack() {
             Dashboard
           </p>
         </Link>
-        <Link to="/dashboard/booking">
+        <Link to="/dashboard/bookings">
           <p
             className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
               location.pathname === "/dashboard/booking"

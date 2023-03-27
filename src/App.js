@@ -13,6 +13,7 @@ import CheckIn from "./components/CheckIn";
 import CheckOut from "./components/CheckOut";
 import RoomDetailsFront from "./components/RoomDetailsFront";
 import Cart from "./components/Cart";
+import BookingDetail from "./components/BookingDetail";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
           </Route>
           <Route path="/dashboard" element={<LayoutBack />}>
             <Route index element={<h1>Dashboard</h1>} />
-            <Route path="booking" element={<Booking />} />
+            <Route path="bookings" element={<Booking />} />
+            <Route path="bookings/:id" element={<BookingDetail />} />
             <Route path="checkin" element={<CheckIn />} />
             <Route path="checkout" element={<CheckOut />} />
             <Route path="rooms" element={<Rooms />} />
