@@ -192,7 +192,7 @@ export default function RoomList() {
                   {availabilityBadge(room.availability)}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  <Link to={"/dashboard/rooms/:id"}>
+                  <Link to={"/dashboard/rooms/" + room.id}>
                     <FontAwesomeIcon
                       icon={faEye}
                       className="h-6 w-6 cursor-pointer text-blue-700"

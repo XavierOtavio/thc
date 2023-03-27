@@ -7,14 +7,28 @@ export default function RoomDetails() {
         <div class="max-w-3xl text-left">
           <h2 class="text-3xl font-bold sm:text-4xl">Quarto de solteiro</h2>
         </div>
-
         <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-          <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
-            <img
-              alt="Party"
-              src="https://hotelemile.com/_novaimg/galleria/1493923.jpg"
-              class="absolute inset-0 h-full w-full rounded-md object-cover"
-            />
+          <div className="flex flex-col">
+            <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+              <img
+                alt="Party"
+                src="https://hotelemile.com/_novaimg/galleria/1493923.jpg"
+                class="absolute inset-0 h-full w-full rounded-md object-cover"
+              />
+            </div>
+            <div class="relative w-full pt-10">
+              <input
+                type="file"
+                id="image-upload"
+                class="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+              />
+              <button
+                type="button"
+                class="focus:shadow-outline-blue rounded-md border bg-thc3 bg-yhc3 py-2 px-4 font-semibold text-white hover:bg-thc3 focus:outline-none active:bg-thc3"
+              >
+                Alterar imagem
+              </button>
+            </div>
           </div>
 
           <div class="lg:py-16">
@@ -23,10 +37,47 @@ export default function RoomDetails() {
                 Detalhes:
               </h2>
               <ul class="max-w-md list-inside list-disc space-y-1 text-gray-500 dark:text-gray-400">
-                <li>Piso 4, Ala 2, Porta 0402</li>
-                <li>40m2</li>
                 <li>
-                  1 cama solteiro, 1 armário, 1 cómoda, 1 mesinha de cabeceira
+                  <label
+                    for="UserEmail"
+                    class="block text-xs font-medium text-gray-700"
+                  >
+                    Morada
+                  </label>
+                  <input
+                    type="email"
+                    id="UserEmail"
+                    placeholder="Piso 4, Ala 2, Porta 0402"
+                    class="mt-1 w-full rounded-md border-gray-500 shadow-sm sm:text-sm"
+                  />
+                </li>
+                <li>
+                  <label
+                    for="UserEmail"
+                    class="block text-xs font-medium text-gray-700"
+                  >
+                    Área
+                  </label>
+                  <input
+                    type="email"
+                    id="UserEmail"
+                    placeholder="50m2"
+                    class="mt-1 w-full rounded-md border-gray-500 shadow-sm sm:text-sm"
+                  />
+                </li>
+                <li>
+                  <label
+                    for="UserEmail"
+                    class="block text-xs font-medium text-gray-700"
+                  >
+                    Mobilia
+                  </label>
+                  <input
+                    type="email"
+                    id="UserEmail"
+                    placeholder="1 cama solteiro, 1 armário, 1 cómoda, 1 mesinha de cabeceira"
+                    class="mt-1 w-full rounded-md border-gray-500 shadow-sm sm:text-sm"
+                  />
                 </li>
               </ul>
               <h2 class="mb-2 text-left text-lg font-semibold text-gray-900 dark:text-white">
@@ -34,64 +85,42 @@ export default function RoomDetails() {
               </h2>
               <ul class="max-w-md list-inside space-y-1 text-gray-500 dark:text-gray-400">
                 <li class="flex items-center">
-                  <svg
-                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  Suite (banheira)
+                  <input type="checkbox" class="form-checkbox" name="suite" />
+                  <span class="ml-2 text-gray-700">Suite</span>
                 </li>
                 <li class="flex items-center">
-                  <svg
-                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  Televisão
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="televisao"
+                  />
+                  <span class="ml-2 text-gray-700">Televisão</span>
                 </li>
                 <li class="flex items-center">
-                  <svg
-                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  Serviço de quarto
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="servico-quarto"
+                  />
+                  <span class="ml-2 text-gray-700">Serviço de quarto</span>
                 </li>
                 <li class="flex items-center">
-                  <svg
-                    class="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <input type="checkbox" class="form-checkbox" name="varanda" />
+                  <span class="ml-2 text-gray-700">Varanda</span>
+                </li>
+                <li>
+                  <label
+                    for="UserEmail"
+                    class="block text-xs font-medium text-gray-700"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  Varanda
+                    Adicionar opção
+                  </label>
+                  <input
+                    type="email"
+                    id="UserEmail"
+                    placeholder="jacuzzi"
+                    class="mt-1 w-full rounded-md border-gray-500 shadow-sm sm:text-sm"
+                  />
                 </li>
               </ul>
             </article>
