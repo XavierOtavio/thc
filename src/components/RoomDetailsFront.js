@@ -4,21 +4,11 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-  faCalendarDays,
-  faUserGroup,
-  faMagnifyingGlass,
   faWifi,
-  faSquareParking,
-  faUtensils,
-  faPersonSwimming,
-  faDumbbell,
-  faBellConcierge,
   faUser,
   faTv,
   faBath,
   faFan,
-  faBed,
-  faX,
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 

@@ -6,6 +6,7 @@ import CheckoutModal from "./CheckoutModal";
 
 function Cart() {
   const [openModal, setOpenModal] = useState(false);
+  const [modalContent, setModalContent] = useState("checkout");
 
   return (
     <div>
@@ -174,7 +175,7 @@ function Cart() {
                     </div>
                     <div class="flex justify-between !text-base font-medium">
                       <dt>Total (pagar ao balcão)</dt>
-                      <dd>1060,00€</dd>
+                      <dd>1020,00€</dd>
                     </div>
                     <hr class="border-t border-gray-200 pt-2" />
                     <div class="flex justify-between !text-base font-medium">
@@ -216,7 +217,12 @@ function Cart() {
                     >
                       Checkout
                     </button>
-                    {openModal && <CheckoutModal openModal={setOpenModal} />}
+                    {openModal && (
+                      <CheckoutModal
+                        openModal={setOpenModal}
+                        modalContent={setModalContent}
+                      />
+                    )}
                   </div>
                 </div>
               </div>

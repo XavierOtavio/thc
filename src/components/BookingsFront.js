@@ -2,11 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import CheckoutModal from "./CheckoutModal";
 
 function BookinsFront() {
-  const [openModal, setOpenModal] = useState(false);
-
   return (
     <div>
       <section>
@@ -19,76 +16,15 @@ function BookinsFront() {
             </header>
 
             <div class="mt-8">
+              <h1 class="text-xl font-medium text-gray-900 sm:text-3xl">
+                Reserva 003
+              </h1>
+              <dt className="font-bold text-green-600">
+                seg. 03 de abril - qua. 05 de abril - 240,00€
+              </dt>
+
+              <div className="mb-5 h-0.5 w-full bg-thc1" />
               <ul class="space-y-4">
-                <li class="flex items-center gap-4">
-                  <img
-                    src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
-                    alt=""
-                    class="aspect-video h-32 rounded object-cover"
-                  />
-
-                  <div>
-                    <h3 class="text-3xl text-gray-900">Quarto de Casal</h3>
-
-                    <dl class="mt-0.5 space-y-px text-sm text-gray-600">
-                      <div class="flex items-center space-x-2">
-                        <FontAwesomeIcon icon={faUser} />
-                        <FontAwesomeIcon icon={faUser} />
-                        <span>2</span>
-                      </div>
-
-                      <div className="font-bold text-green-600">
-                        <dt>seg. 17 de abril - qua. 19 de abril --- 820,00€</dt>
-                      </div>
-
-                      <div>
-                        <dt>Serviços: Wi-fi | TV | WC | AC</dt>
-                        <dd class="inline">
-                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
-                        </dd>
-                      </div>
-                    </dl>
-                  </div>
-
-                  <div class="flex flex-1 items-center justify-end gap-2">
-                    <form>
-                      <label for="Line1Qty" class="sr-only">
-                        {" "}
-                        Quantity{" "}
-                      </label>
-
-                      <input
-                        type="number"
-                        min="1"
-                        value="2"
-                        id="Line1Qty"
-                        class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
-                      />
-                    </form>
-
-                    <button class="text-gray-600 transition hover:text-red-600">
-                      <span class="sr-only">Remove item</span>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-
-                <hr class="border-t border-gray-200" />
-
                 <li class="flex items-center gap-4">
                   <img
                     src="https://hotelemile.com/_novaimg/galleria/1493923.jpg"
@@ -97,18 +33,13 @@ function BookinsFront() {
                   />
 
                   <div>
-                    <h3 class="text-3xl text-gray-900">Quarto de Individual</h3>
+                    <h3 class="text-2xl text-gray-900">Quarto de Individual</h3>
 
                     <dl class="mt-0.5 space-y-px text-sm text-gray-600">
                       <div class="flex items-center space-x-2">
                         <FontAwesomeIcon icon={faUser} />
                         <span>1</span>
                       </div>
-
-                      <div className="font-bold text-green-600">
-                        <dt>seg. 17 de abril - qua. 19 de abril --- 240,00€</dt>
-                      </div>
-
                       <div>
                         <dt>Serviços: Wi-fi | TV | WC | AC</dt>
                         <dd class="inline">
@@ -130,31 +61,122 @@ function BookinsFront() {
                         min="1"
                         value="1"
                         id="Line1Qty"
-                        class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+                        class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-lg text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
                       />
                     </form>
-
-                    <button class="text-gray-600 transition hover:text-red-600">
-                      <span class="sr-only">Remove item</span>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                        />
-                      </svg>
-                    </button>
                   </div>
                 </li>
               </ul>
+              <hr class="my-3 border-t border-gray-200" />
+              <div class="flex justify-end">
+                <button class="rounded-md bg-red-700 px-4 py-2 text-white">
+                  Cancelar
+                </button>
+              </div>
+              <div className="mt-3 h-0.5 w-full bg-thc1" />
+            </div>
+            <div class="mt-24">
+              <h1 class="text-xl font-medium text-gray-900 sm:text-3xl">
+                Reserva 001
+              </h1>
+              <dt className="font-bold text-gray-400">
+                seg. 17 de janeiro - qua. 19 de janeiro - 1780,00€
+              </dt>
+
+              <div className="mb-5 h-0.5 w-full bg-thc1" />
+              <ul class="space-y-4">
+                <li class="flex items-center gap-4">
+                  <img
+                    src="https://assets.tivolihotels.com/image/upload/q_auto,f_auto,c_limit,w_1378/media/minor/tivoli/images/hotels/tspm/rooms/topimage1920x1000/tspm_presidential-suite_5_1920x1000.jpg"
+                    alt=""
+                    class="aspect-video h-32 rounded object-cover"
+                  />
+
+                  <div>
+                    <h3 class="text-2xl text-gray-900">Quarto Presidencial</h3>
+
+                    <dl class="mt-0.5 space-y-px text-sm text-gray-600">
+                      <div class="flex items-center space-x-2">
+                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon icon={faUser} />
+                        <span>4</span>
+                      </div>
+                      <div>
+                        <dt>Serviços: Wi-fi | TV | WC | AC</dt>
+                        <dd class="inline">
+                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div class="flex flex-1 items-center justify-end gap-2">
+                    <form>
+                      <label for="Line1Qty" class="sr-only">
+                        {" "}
+                        Quantity{" "}
+                      </label>
+
+                      <input
+                        type="number"
+                        min="1"
+                        value="1"
+                        id="Line1Qty"
+                        class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-lg text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+                      />
+                    </form>
+                  </div>
+                </li>
+
+                <hr class="border-t border-gray-200" />
+
+                <li class="flex items-center gap-4">
+                  <img
+                    src="https://www.hotelgarance.com/_novaimg/galleria/342681.jpg"
+                    alt=""
+                    class="aspect-video h-32 rounded object-cover"
+                  />
+
+                  <div>
+                    <h3 class="text-2xl text-gray-900">Quarto de Casal</h3>
+
+                    <dl class="mt-0.5 space-y-px text-sm text-gray-600">
+                      <div class="flex items-center space-x-2">
+                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon icon={faUser} />
+
+                        <span>2</span>
+                      </div>
+                      <div>
+                        <dt>Serviços: Wi-fi | TV | WC | AC</dt>
+                        <dd class="inline">
+                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div class="flex flex-1 items-center justify-end gap-2">
+                    <form>
+                      <label for="Line1Qty" class="sr-only">
+                        {" "}
+                        Quantity{" "}
+                      </label>
+
+                      <input
+                        type="number"
+                        min="1"
+                        value="2"
+                        id="Line1Qty"
+                        class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-lg text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+                      />
+                    </form>
+                  </div>
+                </li>
+              </ul>
+              <div className="mt-5 h-0.5 w-full bg-thc1" />
             </div>
           </div>
         </div>

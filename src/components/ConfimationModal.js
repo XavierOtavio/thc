@@ -1,15 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import ConfimationModal from "./ConfimationModal";
-import { Link } from "react-router-dom";
 
-function CheckoutModal(props) {
-  const setOpenModal = props.openModal;
-  const modalData = props.modalData;
-  // const [confirmModal, setConfirmModal] = useState(false);
-  const setModalContent = props.setModalContent;
+function ConfimationModal(props) {
+  const setOpenModal = props.setConfirmModal;
 
   return (
     <div>
@@ -265,17 +259,14 @@ function CheckoutModal(props) {
             </div>
             {/* <!-- Modal footer --> */}
             <div class="space-x-2 rounded-b border-t border-gray-200 p-6">
-              <Link to="/1">
-                <button
-                  data-modal-hide="defaultModal"
-                  type="button"
-                  class=" ml-2 rounded border border-thc1 bg-thc1 px-10 py-3 font-medium text-white hover:border-thc2 hover:bg-thc2"
-                  onClick={() => setOpenModal(false)}
-                >
-                  Checkout
-                </button>
-              </Link>
-
+              <button
+                data-modal-hide="defaultModal"
+                type="button"
+                class=" ml-2 rounded border border-thc1 bg-thc1 px-10 py-3 font-medium text-white hover:border-thc2 hover:bg-thc2"
+                onClick={() => setOpenModal(false)}
+              >
+                Checkout
+              </button>
               <button
                 onClick={() => setOpenModal(false)}
                 type="button"
@@ -291,4 +282,4 @@ function CheckoutModal(props) {
   );
 }
 
-export default CheckoutModal;
+export default ConfimationModal;

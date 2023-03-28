@@ -18,6 +18,8 @@ import {
   faDumbbell,
   faBellConcierge,
 } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "react-router-dom";
+import ConfimationModal from "./ConfimationModal";
 
 function Home() {
   const [quantityOptions, setQuantityOptions] = useState({
@@ -46,9 +48,20 @@ function Home() {
     });
   };
   let filteredLocation = [];
+  let params = useParams();
+  const [openConfrimationModal, setOpenConfrimationModal] = useState(false);
+
+  useEffect(() => {
+    if (params === "1") {
+      setOpenConfrimationModal(true);
+    }
+  }, [params]);
 
   return (
     <div>
+      {openConfrimationModal && (
+        <ConfimationModal setOpenConfrimationModal={setOpenConfrimationModal} />
+      )}
       <section class="relative bg-[url(https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)] bg-cover bg-center bg-no-repeat">
         <div class="absolute inset-0 bg-black/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-thc3 sm:to-white/25"></div>
 
