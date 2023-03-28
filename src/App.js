@@ -17,6 +17,7 @@ import BookingDetail from "./components/BookingDetail";
 import AddRoom from "./components/AddRoom";
 import ClientsList from "./components/ClientsList";
 import Dashboard from "./components/Dashboard";
+import BookingsFront from "./components/BookingsFront";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,7 @@ function App() {
             <Route path="/roomsearch" element={<RoomSearch />} />
             <Route path="/roomdetails/:1" element={<RoomDetailsFront />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/bookings" element={<BookingsFront />} />
           </Route>
           <Route path="/dashboard" element={<LayoutBack />}>
             <Route index element={<Dashboard />} />
