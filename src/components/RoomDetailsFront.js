@@ -264,27 +264,66 @@ function RoomDetailsFront() {
                   </legend>
                   <div class="mt-2 flex gap-1">
                     <label class="cursor-pointer ">
-                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-lg">
+                      <span class="rounded-lg border border-gray-200 px-3 py-1 text-sm">
                         <input
                           type="checkbox"
                           id="material_cotton"
                           name="material"
-                          class="mr-3 "
+                          class="mr-3"
                         />
-                        Teste 1
+                        Pequeno-almoço (+ 20€)
                       </span>
                     </label>
                   </div>
                   <div class="mt-2 flex gap-1">
                     <label class="cursor-pointer ">
-                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-lg">
+                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-sm">
                         <input
                           type="checkbox"
                           id="material_cotton1"
                           name="material1"
                           class="mr-3"
                         />
-                        Teste 2
+                        Parque de Estacionamento (+ 10€)
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-2 flex gap-1">
+                    <label class="cursor-pointer ">
+                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-sm">
+                        <input
+                          type="checkbox"
+                          id="material_cotton1"
+                          name="material1"
+                          class="mr-3"
+                        />
+                        Piscina Exterior (+ 8€)
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-2 flex gap-1">
+                    <label class="cursor-pointer ">
+                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-sm">
+                        <input
+                          type="checkbox"
+                          id="material_cotton1"
+                          name="material1"
+                          class="mr-3"
+                        />
+                        Piscina Interior (+ 12€)
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-2 flex gap-1">
+                    <label class="cursor-pointer ">
+                      <span class=" rounded-lg border border-gray-200 px-3 py-1 text-sm">
+                        <input
+                          type="checkbox"
+                          id="material_cotton1"
+                          name="material1"
+                          class="mr-3"
+                        />
+                        Ginásio (+ 6€)
                       </span>
                     </label>
                   </div>

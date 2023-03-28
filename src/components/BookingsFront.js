@@ -43,7 +43,7 @@ function BookinsFront() {
                       <div>
                         <dt>Serviços: Wi-fi | TV | WC | AC</dt>
                         <dd class="inline">
-                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                          Serviços Adicionais: Parque de estacionamento
                         </dd>
                       </div>
                     </dl>
@@ -106,7 +106,8 @@ function BookinsFront() {
                       <div>
                         <dt>Serviços: Wi-fi | TV | WC | AC</dt>
                         <dd class="inline">
-                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                          Serviços Adicionais: Pequeno-almoço | Parque de
+                          estacionamento | Piscina Exterior
                         </dd>
                       </div>
                     </dl>
@@ -152,7 +153,8 @@ function BookinsFront() {
                       <div>
                         <dt>Serviços: Wi-fi | TV | WC | AC</dt>
                         <dd class="inline">
-                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                          Serviços Adicionais: Pequeno-almoço | Piscina Interior
+                          | Ginásio
                         </dd>
                       </div>
                     </dl>

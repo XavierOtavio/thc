@@ -45,7 +45,8 @@ function Cart() {
                       <div>
                         <dt>Serviços: Wi-fi | TV | WC | AC</dt>
                         <dd class="inline">
-                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                          Serviços Adicionais: Pequeno almoço | Parque de
+                          Estacionamento
                         </dd>
                       </div>
                     </dl>
@@ -113,7 +114,7 @@ function Cart() {
                       <div>
                         <dt>Serviços: Wi-fi | TV | WC | AC</dt>
                         <dd class="inline">
-                          Serviços Adicionais: Serviço1 | Serviço2 | Serviço3{" "}
+                          Serviços Adicionais: Pequeno almoço
                         </dd>
                       </div>
                     </dl>
