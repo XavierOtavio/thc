@@ -17,104 +17,58 @@ export default function ClientsList() {
   let rooms = [
     {
       id: "0001",
-      tipo: "single",
-      roomPhoto: "https://img.ibxk.com.br/2019/02/17/17124052466014.jpg",
-      availability: "available",
+      username: "mario_faria",
+      Photo: "https://img.ibxk.com.br/2019/02/17/17124052466014.jpg",
+      name: "Mário Faria",
       pricenight: "120",
       phone: "912345678",
     },
     {
       id: "0002",
-      tipo: "double",
+      username: "evabranco82",
       pricenight: "210",
-      roomPhoto:
+      Photo:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSas-xn5pOMuKM0heNM05Q8f1UmhRSVyNLAzIhi_F1Xkg&s",
-      availability: "available",
+      name: "Eva Branco",
       phone: "912345678",
     },
     {
       id: "0003",
-      tipo: "presidential",
+      username: "adolfo_dias_1893",
       pricenight: "680",
-      roomPhoto:
+      Photo:
         "https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png",
-      availability: "reserved",
+      name: "Adolfo Dias",
       phone: "912345678",
     },
     {
       id: "0003",
-      tipo: "suite",
+      username: "jaacaboujessica123",
       pricenight: "400",
-      roomPhoto:
+      Photo:
         "https://www.ignicaodigital.com.br/wp-content/uploads/2014/02/facebook-pessoas.jpg",
-      availability: "maintenance",
+      name: "Jessica Antunes",
+      phone: "912345678",
+    },
+    {
+      id: "0003",
+      username: "andre_sousa",
+      pricenight: "400",
+      Photo:
+        "https://media.istockphoto.com/id/1327592506/pt/vetorial/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=1024x1024&w=is&k=20&c=32uXbA50TiDZc3oPryPONCJ1QxVOR9El_8AMl8aFqWs=",
+      name: "André Sousa",
+      phone: "912345678",
+    },
+    {
+      id: "0003",
+      username: "ana_gomes",
+      pricenight: "400",
+      Photo:
+        "https://media.istockphoto.com/id/1327592506/pt/vetorial/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=1024x1024&w=is&k=20&c=32uXbA50TiDZc3oPryPONCJ1QxVOR9El_8AMl8aFqWs=",
+      name: "Ana Gomes",
       phone: "912345678",
     },
   ];
-
-  const availabilityBadge = (availability) => {
-    switch (availability) {
-      case "available":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-green-600 px-2 py-1 text-xs font-bold leading-none text-green-100">
-            Disponível
-          </span>
-        );
-      case "maintenance":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs font-bold leading-none text-red-100">
-            Manutenção
-          </span>
-        );
-      case "reserved":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-indigo-600 px-2 py-1 text-xs font-bold leading-none text-indigo-100">
-            Reservado
-          </span>
-        );
-      default:
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-gray-600 px-2 py-1 text-xs font-bold leading-none text-gray-100">
-            Não definido
-          </span>
-        );
-    }
-  };
-
-  const typeBadge = (type) => {
-    switch (type) {
-      case "single":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-blue-600 px-2 py-1 text-xs font-bold leading-none text-blue-100">
-            Individual
-          </span>
-        );
-      case "double":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-pink-600 px-2 py-1 text-xs font-bold leading-none text-pink-100">
-            Casal
-          </span>
-        );
-      case "suite":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-indigo-600 px-2 py-1 text-xs font-bold leading-none text-indigo-100">
-            Suite
-          </span>
-        );
-      case "presidential":
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-yellow-600 px-2 py-1 text-xs font-bold leading-none text-yellow-100">
-            Presidencial
-          </span>
-        );
-      default:
-        return (
-          <span class="mr-2 inline-flex items-center justify-center rounded-full bg-gray-600 px-2 py-1 text-xs font-bold leading-none text-gray-100">
-            Não definido
-          </span>
-        );
-    }
-  };
 
   return (
     <div className="grid h-full w-full grid-cols-12 grid-rows-6 items-start gap-10 py-10">
@@ -169,10 +123,13 @@ export default function ClientsList() {
                 Foto
               </th>
               <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                Tipo
+                Utilizador
               </th>
               <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                Disponibilidade
+                Nome
+              </th>
+              <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
+                Contacto
               </th>
               <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
                 Ações
@@ -184,19 +141,13 @@ export default function ClientsList() {
               <tr key={room.id} className="border-b">
                 <td className="whitespace-nowrap px-4 py-2">{room.id}</td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  <img
-                    src={room.roomPhoto}
-                    className="h-16 w-16 rounded-full"
-                  />
+                  <img src={room.Photo} className="h-16 w-16 rounded-full" />
                 </td>
+                <td className="whitespace-nowrap px-4 py-2">{room.username}</td>
+                <td className="whitespace-nowrap px-4 py-2">{room.name}</td>
+                <td className="whitespace-nowrap px-4 py-2">{room.phone}</td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  {typeBadge(room.tipo)}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2">
-                  {availabilityBadge(room.availability)}
-                </td>
-                <td className="whitespace-nowrap px-4 py-2">
-                  <Link to={"/dashboard/rooms/" + room.id}>
+                  <Link to={"/dashboard/clientslist/clientsdetais"}>
                     <FontAwesomeIcon
                       icon={faEye}
                       className="h-6 w-6 cursor-pointer text-blue-700"
