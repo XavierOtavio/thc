@@ -263,7 +263,7 @@ function CheckoutModal(props) {
             </div>
             {/* <!-- Modal footer --> */}
             <div class="space-x-2 rounded-b border-t border-gray-200 p-6">
-              <Link to="/1">
+              <Link to="/booking_confirmation">
                 <button
                   data-modal-hide="defaultModal"
                   type="button"

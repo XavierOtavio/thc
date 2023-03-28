@@ -20,6 +20,7 @@ import Dashboard from "./components/Dashboard";
 import BookingsFront from "./components/BookingsFront";
 import ClientsDetails from "./components/ClientsDetails";
 import AddBooking from "./components/AddBooking";
+import ConfimationModal from "./components/ConfimationModal";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
             <Route path="/roomdetails/:1" element={<RoomDetailsFront />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/bookings" element={<BookingsFront />} />
+            <Route
+              path="/booking_confirmation"
+              element={<ConfimationModal />}
+            />
           </Route>
           <Route path="/dashboard" element={<LayoutBack />}>
             <Route index element={<Dashboard />} />
