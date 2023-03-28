@@ -18,6 +18,9 @@ import AddRoom from "./components/AddRoom";
 import ClientsList from "./components/ClientsList";
 import Dashboard from "./components/Dashboard";
 import BookingsFront from "./components/BookingsFront";
+import ClientsDetails from "./components/ClientsDetails";
+import AddBooking from "./components/AddBooking";
+
 function App() {
   return (
     <div className="App">
@@ -40,6 +43,8 @@ function App() {
             <Route path="rooms/:id" element={<RoomDetails />} />
             <Route path="rooms/addroom" element={<AddRoom />} />
             <Route path="clientslist" element={<ClientsList />} />
+            <Route path="clientslist/:id" element={<ClientsDetails />} />
+            <Route path="bookings/new" element={<AddBooking />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

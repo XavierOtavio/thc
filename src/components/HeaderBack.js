@@ -78,6 +78,17 @@ export default function HeaderBack() {
         </Link>
       </div>
       <div className="inline-flex h-full w-full items-center justify-around gap-6">
+        <Link to="/dashboard/clientslist">
+          <p
+            className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
+              location.pathname === "/dashboard/checkin"
+                ? "font-bold text-thc2"
+                : "text-gray-500"
+            }`}
+          >
+            Clientes
+          </p>
+        </Link>
         <Link to="/dashboard/checkin">
           <p
             className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
