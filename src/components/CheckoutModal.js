@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 function CheckoutModal(props) {
   const setOpenModal = props.openModal;
   const modalData = props.modalData;
-  // const [confirmModal, setConfirmModal] = useState(false);
-  const setModalContent = props.setModalContent;
 
   return (
     <div>
@@ -270,7 +268,7 @@ function CheckoutModal(props) {
                   data-modal-hide="defaultModal"
                   type="button"
                   class=" ml-2 rounded border border-thc1 bg-thc1 px-10 py-3 font-medium text-white hover:border-thc2 hover:bg-thc2"
-                  onClick={() => setOpenModal(false)}
+                  // onClick={() => setOpenModal(false)}
                 >
                   Checkout
                 </button>

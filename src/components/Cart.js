@@ -217,12 +217,7 @@ function Cart() {
                     >
                       Checkout
                     </button>
-                    {openModal && (
-                      <CheckoutModal
-                        openModal={setOpenModal}
-                        modalContent={setModalContent}
-                      />
-                    )}
+                    {openModal && <CheckoutModal openModal={setOpenModal} />}
                   </div>
                 </div>
               </div>
