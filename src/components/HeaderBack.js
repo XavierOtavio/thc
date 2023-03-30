@@ -48,7 +48,7 @@ export default function HeaderBack() {
         <Link to="/dashboard/bookings">
           <p
             className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
-              location.pathname === "/dashboard/booking"
+              location.pathname === "/dashboard/bookings"
                 ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
@@ -81,7 +81,7 @@ export default function HeaderBack() {
         <Link to="/dashboard/clientslist">
           <p
             className={`cursor-pointer rounded-xl p-4 hover:border-thc1 hover:bg-thc1 hover:font-bold hover:text-white ${
-              location.pathname === "/dashboard/checkin"
+              location.pathname === "/dashboard/clientslist"
                 ? "font-bold text-thc2"
                 : "text-gray-500"
             }`}
@@ -115,16 +115,15 @@ export default function HeaderBack() {
       <div className="mr-10 flex h-full w-full flex-col items-end justify-start">
         <button
           id="dropdownDividerButton"
-          className="flex h-full w-40 items-center justify-center gap-2"
+          className="flex h-full w-40 items-center justify-center py-5"
           type="button"
           onClick={() => setOpenMenu(!openMenu)}
         >
           <img
             src="https://cdn.discordapp.com/attachments/1082425024104894666/1082799435727253584/xSVMV6xD9Cf7K56wjeEF--1--2htnr.jpg"
-            className="h-full rounded-3xl py-5"
+            className={`h-full rounded-xl ${openMenu && "ring ring-thc1"}`}
             alt="adminLogo"
           />
-          <FontAwesomeIcon icon={faAngleDown} color="white" size="lg" />
         </button>
         {openMenu && (
           <div

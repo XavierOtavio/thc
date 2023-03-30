@@ -21,6 +21,7 @@ import BookingsFront from "./components/BookingsFront";
 import ClientsDetails from "./components/ClientsDetails";
 import AddBooking from "./components/AddBooking";
 import ConfimationModal from "./components/ConfimationModal";
+import NewBooking from "./components/NewBooking";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="bookings" element={<Booking />} />
             <Route path="bookings/:id" element={<BookingDetail />} />
+            <Route path="bookings/new" element={<NewBooking />} />
             <Route path="checkin" element={<CheckIn />} />
             <Route path="checkout" element={<CheckOut />} />
             <Route path="rooms" element={<Rooms />} />

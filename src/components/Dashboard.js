@@ -26,7 +26,7 @@ export default function Dashboard() {
             <div className="flex h-full w-2/4 items-center justify-center ">
               <div className="flex h-full w-full flex-col items-start justify-around rounded-3xl py-4 px-4">
                 <p className="text-3xl font-bold text-thc3">€12 345.56</p>
-                <p className="text-base font-thin text-thc3">Lucro hoje</p>
+                <p className="text-base font-thin text-thc3">Lucro</p>
               </div>
             </div>
             <div className="flex h-full w-1/4 items-center justify-center px-4 py-4">
@@ -50,9 +50,9 @@ export default function Dashboard() {
             </div>
             <div className="flex h-full w-2/4 items-center justify-center ">
               <div className="flex h-full w-full flex-col items-start justify-around rounded-3xl py-4 px-4">
-                <p className="text-3xl font-bold text-thc3">+123</p>
+                <p className="text-3xl font-bold text-thc3">76%</p>
                 <p className="text-base font-thin text-thc3">
-                  Novas reservas esta semana
+                  Taxa de ocupação do hotel
                 </p>
               </div>
             </div>
@@ -77,9 +77,9 @@ export default function Dashboard() {
             </div>
             <div className="flex h-full w-2/4 items-center justify-center ">
               <div className="flex h-full w-full flex-col items-start justify-around rounded-3xl py-4 px-4">
-                <p className="text-3xl font-bold text-thc3">+345</p>
+                <p className="text-3xl font-bold text-thc3">345</p>
                 <p className="text-base font-thin text-thc3">
-                  Novos utilizadores
+                  Hóspedes no hotel
                 </p>
               </div>
             </div>

@@ -214,8 +214,8 @@ export default function CheckIn() {
                 <p className="text-xl font-bold">A aguardar pagamento...</p>
               </div>
             ) : (
-              <div className="flex h-full w-full flex-col items-center p-8 gap-8 relative">
-                <p className="uppercase text-xl font-bold">Fatura</p>
+              <div className="relative flex h-full w-full flex-col items-center gap-8 p-8">
+                <p className="text-xl font-bold uppercase">Fatura</p>
                 <div className="flex w-full flex-row items-center justify-center">
                   <div className="flex w-1/2 flex-col items-start justify-start">
                     <p className="text-sm">Nº reserva:</p>
@@ -230,7 +230,7 @@ export default function CheckIn() {
                     <p className="text-sm">João Marco</p>
                   </div>
                 </div>
-                <span className="border border-gray-200 w-full -mb-8" />
+                <span className="-mb-8 w-full border border-gray-200" />
                 <table className="table w-full divide-y-2 divide-gray-200 rounded-xl text-sm">
                   <thead>
                     <tr>
@@ -260,29 +260,40 @@ export default function CheckIn() {
                     </tr>
                   </tbody>
                 </table>
-                <div className="text-left absolute bottom-4 inset-x-8 flex flex-col border-y-2">
-                  <div className="border-y inline-flex absolute bottom-48 w-full">
-                    <div className="whitespace-nowrap px-4 py-2 font-bold left-0 absolute">
+                <div className="absolute inset-x-8 bottom-4 flex flex-col border-y-2 text-left">
+                  <div className="absolute bottom-60 inline-flex w-full border-y">
+                    <div className="absolute left-0 whitespace-nowrap px-4 py-2 font-bold">
                       Subtotal
                     </div>
-                    <div className="whitespace-nowrap px-4 py-2 font-bold right-0 absolute">
+                    <div className="absolute right-0 whitespace-nowrap px-4 py-2 font-bold">
                       {(Number(booking.value) * 0.76).toFixed(2) || 0.0}
                     </div>
                   </div>
-                  <div className="border-y inline-flex absolute bottom-36 w-full">
-                    <div className="whitespace-nowrap px-4 py-2 font-bold left-0 absolute">
+                  <div className="absolute bottom-48 inline-flex w-full border-y">
+                    <div className="absolute left-0 whitespace-nowrap px-4 py-2 font-bold">
                       Taxa (23%)
                     </div>
-                    <div className="whitespace-nowrap px-4 py-2 font-bold right-0 absolute">
+                    <div className="absolute right-0 whitespace-nowrap px-4 py-2 font-bold">
                       {(Number(booking.value) * 0.23).toFixed(2) || 0.0}
                     </div>
                   </div>
-                  <div className="inline-flex absolute bottom-24 w-full border-y-2">
-                    <div className="whitespace-nowrap px-4 py-2 font-bold text-xl left-0 absolute">
-                      Total
+                  <div className="absolute bottom-36 inline-flex w-full border-y">
+                    <div className="absolute left-0 whitespace-nowrap px-4 py-2 font-bold">
+                      Caução
                     </div>
-                    <div className="whitespace-nowrap px-4 py-2 font-bold text-xl right-0 absolute">
-                      {Number(booking.value).toFixed(2) || 0.0}
+                    <div className="absolute right-0 whitespace-nowrap px-4 py-2 font-bold">
+                      -{(Number(booking.value) * 0.1).toFixed(2) || 0.0}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-24 inline-flex w-full border-y-2">
+                    <div className="absolute left-0 whitespace-nowrap px-4 py-2 text-xl font-bold">
+                      Total a pagar
+                    </div>
+                    <div className="absolute right-0 whitespace-nowrap px-4 py-2 text-xl font-bold">
+                      {(
+                        Number(booking.value) -
+                        Number(booking.value) * 0.1
+                      ).toFixed(2) || 0.0}
                     </div>
                   </div>
                   <button

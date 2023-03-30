@@ -295,16 +295,18 @@ export default function Booking() {
             </div>
           </div>
           <div className="flex h-full w-full items-center justify-end">
-            <button
-              type="button"
-              className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"
-            >
-              <FontAwesomeIcon
-                icon={faPlus}
-                className="absolute right-0 mr-3 h-6 w-6"
-              />
-              Adicionar
-            </button>
+            <Link to="new">
+              <button
+                type="button"
+                className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"
+              >
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  className="absolute right-0 mr-3 h-6 w-6"
+                />
+                Adicionar
+              </button>
+            </Link>
           </div>
         </div>
       </div>
