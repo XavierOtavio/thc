@@ -1,13 +1,40 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimesCircle } from "@fortawesome/free-regular-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 export default function NewBooking() {
   const [numberOfGuests, setNumberOfGuests] = useState(0);
   const [typeOfRoom, setTypeOfRoom] = useState("");
+  const [openServices, setOpenServices] = useState(false);
+  const [services, setServices] = useState([
+    {
+      name: "Pequeno-Almoço",
+      price: 10,
+      selected: true,
+    },
+    {
+      name: "Almoço",
+      price: 20,
+      selected: false,
+    },
+    {
+      name: "Ginásio",
+      price: 5,
+      selected: false,
+    },
+    {
+      name: "Spa",
+      price: 15,
+      selected: false,
+    },
+  ]);
+
   return (
     <div class="flex items-center justify-center p-12">
       <div class="mx-auto w-2/3">
         <div class="-mx-3 flex flex-wrap">
-          <div class="w-full px-3 sm:w-1/2">
+          <div class="w-1/2 px-3">
             <div class="mb-5">
               <label
                 for="fName"
@@ -19,12 +46,12 @@ export default function NewBooking() {
                 type="text"
                 name="fName"
                 id="fName"
-                placeholder="First Name"
+                placeholder="José"
                 class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
             </div>
           </div>
-          <div class="w-full px-3 sm:w-1/2">
+          <div class="w-1/2 px-3">
             <div class="mb-5">
               <label
                 for="lName"
@@ -36,7 +63,7 @@ export default function NewBooking() {
                 type="text"
                 name="lName"
                 id="lName"
-                placeholder="Last Name"
+                placeholder="Carvalho"
                 class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               />
             </div>
@@ -183,7 +210,7 @@ export default function NewBooking() {
                 defaultValue={(e) => (e.target.disabled = true && "")}
                 disabled={typeOfRoom === ""}
                 id="room"
-                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               >
                 <option value="" selected>
                   Selecione
@@ -195,15 +222,117 @@ export default function NewBooking() {
             </div>
           </div>
         </div>
-        <div className="inline-flex w-full justify-around gap-4">
-          <Link to={-1}>
-            <button class=" hover:shadow-form w-full rounded-md bg-thc3 py-3 px-8 text-center text-base font-semibold text-white outline-none">
-              Voltar
-            </button>
+        <div class="-mx-3 flex flex-wrap">
+          <div class="w-full px-3">
+            <div class="relative flex flex-col items-center">
+              <div className="w-full">
+                <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+                  <div className="flex h-8 flex-auto flex-wrap">
+                    {services.map((service) => (
+                      <>
+                        {service.selected === true && (
+                          <div
+                            onClick={() => {
+                              setServices(
+                                services.map((s) =>
+                                  s.name === service.name
+                                    ? { ...s, selected: false }
+                                    : s
+                                )
+                              );
+                            }}
+                            key={service.price}
+                            className="m-1 flex cursor-pointer items-center justify-center gap-4 rounded-full border border-thc1 bg-thc3 py-1 px-2 font-medium text-thc2"
+                          >
+                            <div className="max-w-full flex-initial text-xs font-normal leading-none">
+                              {service.name}
+                            </div>
+                            <div className="flex flex-auto flex-row-reverse">
+                              <FontAwesomeIcon icon={faTimesCircle} />
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    ))}
+                  </div>
+                  <div
+                    className={`flex ${
+                      openServices ? "w-24 justify-start" : "w-8 justify-start"
+                    } transform cursor-pointer items-center  gap-1 rounded-full bg-thc3 text-thc2 duration-500 ease-in-out`}
+                    onClick={() => setOpenServices(!openServices)}
+                  >
+                    <FontAwesomeIcon
+                      icon={faPlus}
+                      className={`${
+                        openServices ? " animate-spinTo45" : "animate-spinTo0"
+                      } ml-2 transform transition duration-500 ease-in-out`}
+                    />
+                    <div
+                      className={`transform text-xs font-normal leading-none ${
+                        openServices
+                          ? "opacity-100 delay-200"
+                          : "sr-only opacity-0"
+                      }  transition-opacity duration-300 ease-out`}
+                    >
+                      Adicionar
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {openServices && (
+                <div className="max-h-select absolute top-14 left-0 z-40 w-full overflow-y-auto rounded bg-white shadow">
+                  <div className="flex w-full flex-col">
+                    {services.map((service) => (
+                      <>
+                        {service.selected === false && (
+                          <div className="w-full cursor-pointer border-b border-gray-100">
+                            <div
+                              onClick={() => {
+                                setServices(
+                                  services.map((s) =>
+                                    s.name === service.name
+                                      ? { ...s, selected: true }
+                                      : s
+                                  )
+                                );
+                              }}
+                              key={service.price}
+                              className="flex items-center justify-between border-l-2 border-transparent p-2 pl-2 hover:border-thc1  hover:bg-thc1 hover:text-white"
+                            >
+                              <div className="flex flex-[3] items-center">
+                                <div className="mx-2 font-medium leading-6">
+                                  {service.name}
+                                </div>
+                              </div>
+                              <div className="flex flex-[1] items-center justify-end">
+                                <div className="mx-2 font-medium leading-6">
+                                  + {service.price} €
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 inline-flex w-full justify-around gap-4">
+          <Link
+            to={-1}
+            className="hover:shadow-form w-1/4 rounded-md bg-thc3 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+          >
+            Voltar
           </Link>
-          <button class=" hover:shadow-form w-full rounded-md bg-thc1 py-3 px-8 text-center text-base font-semibold text-white outline-none">
+          <Link
+            to={-1}
+            className="hover:shadow-form w-full rounded-md bg-thc1 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+          >
             Reservar
-          </button>
+          </Link>
         </div>
       </div>
     </div>

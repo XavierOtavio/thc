@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"],
       },
+      animation: {
+        spinTo45: "spin45 500ms ease-in-out forwards",
+        spinTo0: "spin0 500ms ease-in-out forwards",
+      },
     },
   },
   plugins: [],
