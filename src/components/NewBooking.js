@@ -189,7 +189,7 @@ export default function NewBooking() {
                   Selecione
                 </option>
                 {[...Array(4)].map((_, index) => (
-                  <option>{`${typeOfRoom} ${index + 1}`}</option>
+                  <option key={_}>{`${typeOfRoom} ${index + 1}`}</option>
                 ))}
               </select>
             </div>
