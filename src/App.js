@@ -24,6 +24,7 @@ import ConfimationModal from "./components/ConfimationModal";
 import NewBooking from "./components/NewBooking";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Settings from "./components/Settings";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             <Route path="clientslist" element={<ClientsList />} />
             <Route path="clientslist/:id" element={<ClientsDetails />} />
             <Route path="bookings/new" element={<AddBooking />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
