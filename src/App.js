@@ -22,6 +22,8 @@ import ClientsDetails from "./components/ClientsDetails";
 import AddBooking from "./components/AddBooking";
 import ConfimationModal from "./components/ConfimationModal";
 import NewBooking from "./components/NewBooking";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -39,6 +41,9 @@ function App() {
               element={<ConfimationModal />}
             />
           </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
           <Route path="/dashboard" element={<LayoutBack />}>
             <Route index element={<Dashboard />} />
             <Route path="bookings" element={<Booking />} />
