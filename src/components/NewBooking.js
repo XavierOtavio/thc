@@ -264,8 +264,10 @@ export default function NewBooking() {
                     <FontAwesomeIcon
                       icon={faPlus}
                       className={`${
-                        openServices ? " animate-spinTo45" : "animate-spinTo0"
-                      } ml-2 transform transition duration-500 ease-in-out`}
+                        openServices
+                          ? "mx-0.5 animate-spinTo45"
+                          : "mx-0.5 animate-spinTo0"
+                      } w-8 transform transition-all duration-500 ease-in-out`}
                     />
                     <div
                       className={`transform text-xs font-normal leading-none ${
@@ -274,7 +276,7 @@ export default function NewBooking() {
                           : "sr-only opacity-0"
                       }  transition-opacity duration-300 ease-out`}
                     >
-                      Adicionar
+                      Fechar
                     </div>
                   </div>
                 </div>
