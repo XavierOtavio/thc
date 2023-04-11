@@ -104,8 +104,10 @@ export default function Dashboard() {
             </div>
             <div className="flex h-full w-2/4 items-center justify-center ">
               <div className="flex h-full w-full flex-col items-start justify-around rounded-3xl py-4 px-4">
-                <p className="text-3xl font-bold text-thc3">€12 345.56</p>
-                <p className="text-base font-thin text-thc3">Vendas este mês</p>
+                <p className="text-3xl font-bold text-thc3">€23 456.78</p>
+                <p className="text-base font-thin text-thc3">
+                  Faturação prevista este mês
+                </p>
               </div>
             </div>
             <div className="flex h-full w-1/4 items-center justify-center px-4 py-4">
