@@ -97,7 +97,7 @@ export default function ClientsList() {
             />
           </div>
           <div className="flex h-full w-full items-center justify-end">
-            <Link to={"/dashboard/rooms/addroom"}>
+            <Link to={"/dashboard/clientslist/new"}>
               <button
                 type="button"
                 className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"

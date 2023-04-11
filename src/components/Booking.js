@@ -51,7 +51,7 @@ export default function Booking() {
       checkin: "2023-05-05",
       checkout: "2023-05-08",
       status: "Pending",
-      room: "0002",
+      room: "0002/0016/0021",
       value: 85.0,
     },
     {
@@ -67,7 +67,7 @@ export default function Booking() {
       checkin: "2023-06-01",
       checkout: "2023-06-05",
       status: "Confirmed",
-      room: "0005",
+      room: "0005/0015",
       value: 220.0,
     },
     {
@@ -327,7 +327,7 @@ export default function Booking() {
                 CheckOut
               </th>
               <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                Quarto
+                Quartos
               </th>
               <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
                 Valor

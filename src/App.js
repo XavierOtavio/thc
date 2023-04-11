@@ -19,12 +19,12 @@ import ClientsList from "./components/ClientsList";
 import Dashboard from "./components/Dashboard";
 import BookingsFront from "./components/BookingsFront";
 import ClientsDetails from "./components/ClientsDetails";
-import AddBooking from "./components/AddBooking";
 import ConfimationModal from "./components/ConfimationModal";
 import NewBooking from "./components/NewBooking";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Settings from "./components/Settings";
+import AddClients from "./components/AddClients";
 
 function App() {
   return (
@@ -57,7 +57,8 @@ function App() {
             <Route path="rooms/addroom" element={<AddRoom />} />
             <Route path="clientslist" element={<ClientsList />} />
             <Route path="clientslist/:id" element={<ClientsDetails />} />
-            <Route path="bookings/new" element={<AddBooking />} />
+            <Route path="clientslist/new" element={<AddClients />} />
+            <Route path="bookings/new" element={<NewBooking />} />
             <Route path="settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />

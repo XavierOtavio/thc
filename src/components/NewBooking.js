@@ -68,6 +68,40 @@ export default function NewBooking() {
               />
             </div>
           </div>
+          <div class="w-1/2 px-3">
+            <div class="mb-5">
+              <label
+                for="fName"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Telefone
+              </label>
+              <input
+                type="text"
+                name="fName"
+                id="fName"
+                placeholder="999999999"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+          </div>
+          <div class="w-1/2 px-3">
+            <div class="mb-5">
+              <label
+                for="fName"
+                class="mb-3 block text-base font-medium text-[#07074D]"
+              >
+                Email
+              </label>
+              <input
+                type="text"
+                name="fName"
+                id="fName"
+                placeholder="teste@teste.com"
+                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+            </div>
+          </div>
         </div>
         <div class="mb-5">
           <label
