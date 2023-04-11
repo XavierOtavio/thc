@@ -23,7 +23,7 @@ function Login() {
             <button>
               <FontAwesomeIcon
                 icon={faX}
-                className="absolute top-12 left-12 h-8 w-8 text-thc3/50"
+                className="absolute top-12 left-12 h-8 w-8 text-thc3"
               />
             </button>
           </Link>
