@@ -221,6 +221,8 @@ export default function CheckIn() {
                     <p className="text-sm">Nº reserva:</p>
                     <p className="text-sm">Cliente:</p>
                     <p className="text-sm">Empregado:</p>
+                    <p className="text-sm">NIF cliente:</p>
+                    <p className="text-sm">NIF empresa:</p>
                   </div>
                   <div className="flex w-1/2 flex-col items-start justify-start">
                     <p className="text-sm">{booking.id || 0}</p>
@@ -228,6 +230,8 @@ export default function CheckIn() {
                       {booking.name || "[Introduzir nome]"}
                     </p>
                     <p className="text-sm">João Marco</p>
+                    <p className="text-sm">{999999999}</p>
+                    <p className="text-sm">{111111111}</p>
                   </div>
                 </div>
                 <span className="-mb-8 w-full border border-gray-200" />

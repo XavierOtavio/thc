@@ -224,92 +224,60 @@ export default function BookingDetail() {
               <p className="flex flex-col">{showProducts()}</p>
             </div>
           </div>
-          <div className="col-span-12 row-span-3 m-2 flex flex-col rounded-lg bg-stone-200 px-16 py-8">
-            <p className="pb-2 text-2xl font-bold">Histórico da reserva</p>
-            <table className="w-full table-fixed p-2 text-left text-sm text-stone-500">
-              <thead className="text-xs uppercase text-stone-900">
-                <tr>
-                  <th className="px-6 py-3" scope="col">
-                    Data
-                  </th>
-                  <th className="px-6 py-3" scope="col">
-                    Estado
-                  </th>
-                  <th className="px-6 py-3" scope="col">
-                    Observações
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-stone-300">
-                {sliceData(history, page, len).map((status) => {
-                  return (
-                    <tr key={Booking.id} className="">
-                      <td className="whitespace-nowrap px-6 py-3">
-                        {status.statusDate}
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-3">
-                        {statusBadge(status.status)}
-                      </td>
-                      <td className="flex flex-col gap-4 whitespace-nowrap px-6 py-3">
-                        {status?.observations[0] === "Done" && (
-                          <span className="h-8 w-24 rounded-2xl border border-green-500 py-1 px-2 text-center align-baseline text-xs text-green-500 ">
-                            Com Sucesso
-                          </span>
-                        )}
-                        {status?.observations[0] === "Error" && (
-                          <span className="h-8 w-24 rounded-2xl border border-red-500 py-1 px-2 text-center align-baseline text-xs text-red-500 ">
-                            Sem Sucesso
-                          </span>
-                        )}
-                        {status?.observations[0] === "InProgress" && (
-                          <span className="h-8 w-24 rounded-2xl border border-orange-500 py-1 px-2 text-center align-baseline text-xs text-orange-500 ">
-                            Em progresso
-                          </span>
-                        )}
-                        <p className=" whitespace-pre-wrap text-sm">
-                          {status?.observations[1]}
-                        </p>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-              {calculateRange(history, len).length > 1 && (
-                <tfoot className="absolute left-16 right-16  -bottom-10 inline-flex items-center justify-center">
-                  <td>
-                    <tr>
-                      <button
-                        className="rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-                        onClick={() => setPage(page - 1)}
-                        disabled={page === 1}
-                      >
-                        Anterior
-                      </button>
-                      {calculateRange(history, len).map((num) => (
-                        <button
-                          key={num}
-                          className={`${
-                            page === num
-                              ? "bg-indigo-500 text-white"
-                              : "bg-white text-gray-700"
-                          } border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-50`}
-                          onClick={() => setPage(num)}
-                        >
-                          {num}
-                        </button>
-                      ))}
-                      <button
-                        className="bBooking bBooking-gray-300 rounded-r-md bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-                        onClick={() => setPage(page + 1)}
-                        disabled={page === calculateRange(history, len).length}
-                      >
-                        Seguinte
-                      </button>
-                    </tr>
-                  </td>
-                </tfoot>
-              )}
-            </table>
+
+          <div className="col-span-8 row-span-3 m-2 flex flex-col rounded-lg bg-stone-200 px-16 py-8 text-left">
+            <h2 class="mb-2 text-left text-lg font-semibold text-gray-900 dark:text-white">
+              Serviços:
+            </h2>
+            <ul class="max-w-md list-inside space-y-1 text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <input type="checkbox" class="form-checkbox" name="suite" />
+                <span class="ml-2 text-gray-700">Pequeno almoço</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="form-checkbox" name="televisao" />
+                <span class="ml-2 text-gray-700">Almoço</span>
+              </li>
+              <li class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox"
+                  name="servico-quarto"
+                />
+                <span class="ml-2 text-gray-700">Ginasio</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="form-checkbox" name="varanda" />
+                <span class="ml-2 text-gray-700">Spa</span>
+              </li>
+              <li>
+                <label
+                  for="UserEmail"
+                  class="block text-xs font-medium text-gray-700"
+                >
+                  Adicionar opção
+                </label>
+                <input
+                  type="email"
+                  id="UserEmail"
+                  placeholder="jacuzzi"
+                  class="mt-1 w-full rounded-md border-gray-500 shadow-sm sm:text-sm"
+                />
+              </li>
+            </ul>
+            <div class="relative w-full">
+              <input
+                type="file"
+                id="image-upload"
+                class="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+              />
+              <button
+                type="button"
+                class="focus:shadow-outline-blue bg-yhc3 rounded-md border bg-thc3 py-2 px-4 font-semibold text-white hover:bg-thc3 focus:outline-none active:bg-thc3"
+              >
+                Salvar
+              </button>
+            </div>
           </div>
         </div>
       </div>
