@@ -100,7 +100,7 @@ export default function ClientsList() {
             <Link to={"/dashboard/clientslist/new"}>
               <button
                 type="button"
-                className="relative flex h-10 w-32 items-center rounded border border-gray-300 bg-thc2 px-3 text-sm font-normal text-white shadow"
+                className="relative flex h-10 w-32 items-center rounded border border-black bg-thc2 px-3 text-sm font-normal text-black shadow"
               >
                 <FontAwesomeIcon
                   icon={faPlus}
