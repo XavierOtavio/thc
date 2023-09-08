@@ -19,7 +19,6 @@ import {
   faBellConcierge,
 } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
-import ConfimationModal from "./ConfimationModal";
 import { useLocation } from "react-router-dom";
 
 function Home() {
